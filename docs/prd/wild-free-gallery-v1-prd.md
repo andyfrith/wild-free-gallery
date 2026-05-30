@@ -726,9 +726,7 @@ The MVP assumes:
 # Open Questions
 
 - Final visual design direction
-- Technology stack selection
-- Hosting platform selection
-- Analytics implementation
+- Analytics provider selection
 - Artifact publishing workflow
 - Audit cadence
 - Long-term content strategy

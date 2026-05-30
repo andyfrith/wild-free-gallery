@@ -20,18 +20,18 @@ Phase 1B — Experience Definition
 
 ## Current Milestone
 
-Experience Definition & Implementation Planning
+Experience Definition Review & Visual Exploration Readiness
 
 ## Current Objective
 
-Finalize the visitor experience, technical approach, and implementation plan required to begin the MVP build.
+Complete the experience review, begin visual exploration, and prepare the MVP implementation plan.
 
 ## Current Deliverables
 
-1. Technical Architecture V1
+1. Audit #002 — Experience & Design Review
 2. MVP Implementation Plan
 3. Visual Direction / Design System Foundation
-4. Audit #002 — Experience & Design Review
+4. Analytics Provider Selection
 
 ## Recently Completed
 
@@ -46,6 +46,7 @@ Finalize the visitor experience, technical approach, and implementation plan req
 - Project Dashboard V1
 - V1 User Experience Blueprint
 - V1 Wireframe Specification
+- MVP Technical Architecture
 
 ## Active Risks
 
@@ -57,21 +58,19 @@ Finalize the visitor experience, technical approach, and implementation plan req
 
 ## Open Questions
 
-- Deployment strategy
-- Analytics strategy
-- Technology stack selection
-- Hosting platform selection
+- Analytics provider selection
 - Artifact publishing workflow
 - Design system foundation
 - Audit cadence
+- Detailed MVP implementation sequencing
 
 ## Next Actions
 
-1. Create Technical Architecture V1
-2. Decide hosting, deployment, and analytics approach
-3. Create MVP Implementation Plan
-4. Define Visual Direction / Design System Foundation
-5. Complete Audit #002 — Experience & Design Review
+1. Complete Audit #002 — Experience & Design Review
+2. Begin Visual Exploration
+3. Define Visual Direction / Design System Foundation
+4. Create MVP Implementation Plan
+5. Select final analytics provider
 
 ## Conversation Startup Rule
 

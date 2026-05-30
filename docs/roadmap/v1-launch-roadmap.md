@@ -49,6 +49,10 @@ Phase 1B — Experience Definition
 - V1 PRD
 - Website Information Architecture
 - Audit #001
+- Project Dashboard V1
+- V1 User Experience Blueprint
+- V1 Wireframe Specification
+- MVP Technical Architecture
 
 ---
 
@@ -121,6 +125,8 @@ Purpose:
 
 Create a single operational view of project status.
 
+Status: Complete
+
 ---
 
 ### UX Blueprint
@@ -129,6 +135,8 @@ Purpose:
 
 Define the complete visitor experience.
 
+Status: Complete
+
 ---
 
 ### Wireframes
@@ -136,6 +144,18 @@ Define the complete visitor experience.
 Purpose:
 
 Define page layouts and content hierarchy.
+
+Status: Complete
+
+---
+
+### MVP Technical Architecture
+
+Purpose:
+
+Define the technical approach, stack, hosting model, and implementation boundaries required for MVP build.
+
+Status: Complete
 
 ---
 
@@ -152,6 +172,7 @@ Validate experience direction before implementation.
 - Experience clearly defined
 - User journeys validated
 - Wireframes approved
+- Technical approach approved
 
 ---
 
@@ -327,11 +348,11 @@ Favor clarity over novelty.
 
 # Next Immediate Actions
 
-1. Create Dashboard V1
-2. Create UX Blueprint
-3. Create Wireframes
-4. Complete Audit #002
-5. Begin Visual Exploration
+1. Complete Audit #002
+2. Begin Visual Exploration
+3. Define Design System V1
+4. Create MVP Implementation Plan
+5. Select final analytics provider
 
 ---
 

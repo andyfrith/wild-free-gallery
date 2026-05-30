@@ -383,16 +383,46 @@ Implications:
 
 ---
 
+# DEC-016
+
+Title: MVP will use a static-first Next.js architecture.
+
+Status: Accepted
+
+Decision Date: 2026-05-30
+
+Summary:
+
+The Wild Free Gallery MVP will use a static-first, content-driven architecture optimized for rapid launch and low operational complexity.
+
+Accepted architecture:
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Markdown + MDX content
+- GitHub as source repository
+- Vercel deployment
+
+The MVP will not require a database, authentication, user accounts, CMS, admin panel, marketplace, e-commerce, or AI chat interface.
+
+Implications:
+
+- The repository remains the primary content and knowledge source.
+- Engineering can proceed with a simple deployable web application.
+- Hosting and deployment strategy are resolved for MVP.
+- Analytics provider selection remains open between Plausible Analytics and Vercel Analytics.
+
+---
+
 # Open Governance Topics
 
 The following decisions remain unresolved and should eventually receive ADRs or accepted decisions:
 
 - Product positioning details
-- Technology stack
-- Hosting strategy
-- Analytics strategy
-- Content strategy
-- MVP feature scope
+- Analytics provider selection
+- Artifact publishing workflow
 - Launch strategy
 - Post-launch roadmap
 
