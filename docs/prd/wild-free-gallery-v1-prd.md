@@ -725,7 +725,7 @@ The MVP assumes:
 
 # Open Questions
 
-- Final visual design direction
+- Final visual concept selection
 - Analytics provider selection
 - Artifact publishing workflow
 - Audit cadence

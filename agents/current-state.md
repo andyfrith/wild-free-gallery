@@ -16,21 +16,21 @@ Active
 
 ## Current Phase
 
-Phase 1B — Experience Definition
+Phase 1C — Visual Exploration
 
 ## Current Milestone
 
-Experience Definition Review & Visual Exploration Readiness
+Visual Exploration & MVP Build Planning
 
 ## Current Objective
 
-Complete the experience review, begin visual exploration, and prepare the MVP implementation plan.
+Create MVP visual concepts, finalize content structure, and prepare the MVP implementation plan.
 
 ## Current Deliverables
 
-1. Audit #002 — Experience & Design Review
+1. MVP Visual Concepts
 2. MVP Implementation Plan
-3. Visual Direction / Design System Foundation
+3. Content Ownership Model
 4. Analytics Provider Selection
 
 ## Recently Completed
@@ -47,6 +47,9 @@ Complete the experience review, begin visual exploration, and prepare the MVP im
 - V1 User Experience Blueprint
 - V1 Wireframe Specification
 - MVP Technical Architecture
+- Design System Foundation
+- DESIGN.md implementation specification
+- Audit #002 — Experience & Design Review
 
 ## Active Risks
 
@@ -54,23 +57,25 @@ Complete the experience review, begin visual exploration, and prepare the MVP im
 2. Scope creep from future ecosystem ideas.
 3. Delayed transition from planning to building.
 4. Technical implementation has not yet begun.
-5. Visual design direction is not yet finalized.
+5. Visual exploration may expand beyond MVP implementation needs.
+6. Artifact overload may reduce visitor comprehension.
 
 ## Open Questions
 
 - Analytics provider selection
 - Artifact publishing workflow
-- Design system foundation
 - Audit cadence
 - Detailed MVP implementation sequencing
+- Final visual concept selection
+- Content ownership model
 
 ## Next Actions
 
-1. Complete Audit #002 — Experience & Design Review
-2. Begin Visual Exploration
-3. Define Visual Direction / Design System Foundation
-4. Create MVP Implementation Plan
-5. Select final analytics provider
+1. Freeze MVP scope
+2. Generate MVP visual concepts
+3. Select preferred visual direction
+4. Finalize content ownership model
+5. Create MVP Implementation Plan
 
 ## Conversation Startup Rule
 
@@ -87,6 +92,6 @@ This document is an operational snapshot.
 Historical information should be captured in:
 
 - agents/decisions.md
-- audits/
+- docs/audits/
 - Git history
 - Project timeline

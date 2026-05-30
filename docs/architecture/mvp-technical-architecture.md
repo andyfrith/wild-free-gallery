@@ -2,7 +2,7 @@
 
 **Project:** Wild Free Gallery
 **Document:** MVP Technical Architecture
-**Location:** docs/engineering/mvp-technical-architecture.md
+**Location:** docs/architecture/mvp-technical-architecture.md
 **Version:** 1.0
 **Status:** Approved for MVP Implementation
 **Last Updated:** 2026-05-30

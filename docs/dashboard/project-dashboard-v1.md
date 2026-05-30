@@ -15,7 +15,7 @@ Wild Free Gallery is a real creative business, public product case study, and de
 
 The project exists to document the complete journey from idea to execution through strategy, design, engineering, AI collaboration, audits, and continuous learning.
 
-Foundation & Governance activities have been completed and the project is now completing Experience Definition.
+Foundation, experience definition, technical architecture, and design system foundation activities have been completed. The project is now entering Visual Exploration while preparing MVP implementation.
 
 The immediate objective is to launch a polished MVP within approximately one week while maintaining high standards of product quality, design quality, engineering quality, communication quality, and documentation quality.
 
@@ -89,7 +89,7 @@ MVP technical architecture and deployment approach are now defined. Technical im
 
 - Begin implementation planning
 - Select final analytics provider
-- Start MVP build after experience review and visual direction are complete
+- Start MVP build after experience review, visual concept selection, and implementation planning are complete
 
 ---
 
@@ -112,11 +112,11 @@ The project story is becoming increasingly coherent through the Charter, PRD, In
 
 # Current Phase
 
-## Phase 1B — Experience Definition
+## Phase 1C — Visual Exploration
 
 ### Objective
 
-Complete the visitor experience review and prepare for visual design and MVP implementation.
+Create MVP visual concepts, finalize content structure, and prepare for MVP implementation.
 
 ### Success Criteria
 
@@ -124,7 +124,9 @@ Complete the visitor experience review and prepare for visual design and MVP imp
 - Core user journeys documented
 - Wireframes completed
 - Technical approach defined
+- Design system foundation approved
 - Experience review completed
+- Preferred visual direction selected
 
 ---
 
@@ -148,6 +150,9 @@ Completed:
 - V1 User Experience Blueprint
 - V1 Wireframe Specification
 - MVP Technical Architecture
+- Design System Foundation
+- DESIGN.md implementation specification
+- Audit #002 — Experience & Design Review
 
 ### Outcome
 
@@ -157,22 +162,20 @@ A complete governance, planning, and operational foundation has been established
 
 ## Current Focus
 
-🟡 Experience Review & Visual Exploration Readiness
+🟡 Visual Exploration & MVP Build Planning
 
 In Progress:
 
-- Audit #002 preparation
 - MVP implementation planning
-- Visual direction exploration
+- MVP visual concept exploration
+- Content ownership model
 - Analytics provider selection
 
 ---
 
 ## Upcoming Milestones
 
-⚪ Audit #002 — Experience & Design Review
-
-⚪ Visual Exploration Complete
+⚪ Preferred Visual Direction Selected
 
 ⚪ MVP Build Started
 
@@ -196,21 +199,23 @@ In Progress:
 - V1 User Experience Blueprint
 - V1 Wireframe Specification
 - MVP Technical Architecture
+- Design System Foundation
+- DESIGN.md implementation specification
+- Audit #002 — Experience & Design Review
 
 ---
 
 ## In Progress
 
-- Audit #002 Preparation
 - MVP Implementation Planning
-- Visual Direction Exploration
+- MVP Visual Concept Exploration
+- Content Ownership Model
 - Analytics Provider Selection
 
 ---
 
 ## Upcoming
 
-- Design System Foundation
 - MVP Build
 - Public Launch Preparation
 
@@ -221,8 +226,8 @@ In Progress:
 | Milestone               | Status         | Target   |
 | ----------------------- | -------------- | -------- |
 | Foundation & Governance | ✅ Complete    | Phase 1A |
-| Experience Definition   | 🟡 In Progress | Phase 1B |
-| Visual Exploration      | ⚪ Planned     | Phase 1C |
+| Experience Definition   | ✅ Complete    | Phase 1B |
+| Visual Exploration      | 🟡 In Progress | Phase 1C |
 | MVP Build               | ⚪ Planned     | Phase 1D |
 | Public Launch           | ⚪ Planned     | Phase 1E |
 
@@ -244,8 +249,9 @@ In Progress:
 | UX Blueprint                     | Complete    |
 | Wireframes                       | Complete    |
 | MVP Technical Architecture       | Complete    |
-| Audit #002                       | Planned     |
-| Design System Foundation         | Planned     |
+| Design System Foundation         | Complete    |
+| DESIGN.md Implementation Spec    | Complete    |
+| Audit #002                       | Complete    |
 | MVP Build Plan                   | Planned     |
 | Launch Review Audit              | Planned     |
 
@@ -301,6 +307,9 @@ The project is already producing portfolio-quality artifacts despite implementat
 - UX Blueprint
 - Wireframe Specification
 - MVP Technical Architecture
+- Design System Foundation
+- DESIGN.md Implementation Specification
+- Audit #002 Experience & Design Review
 
 ### Observation
 
@@ -323,6 +332,7 @@ This remains one of the strongest differentiators of the Wild Free Gallery appro
 | Evidence Over Claims       | Strengthens portfolio credibility              |
 | Smallest Credible Launch   | Protects scope and maintains momentum          |
 | Static-First MVP Architecture | Resolves stack, hosting, and implementation path |
+| Product Studio Visual Direction | Guides visual exploration without overwhelming evidence |
 
 ### Assessment
 
@@ -382,7 +392,31 @@ Keep messaging centered on:
 
 ### Mitigation
 
-Complete experience review, visual direction, and MVP implementation planning before build begins.
+Complete experience review, visual concept selection, and MVP implementation planning before build begins.
+
+---
+
+## Visual Exploration Scope
+
+### Severity
+
+🟡 Medium
+
+### Mitigation
+
+Use the approved design system foundation and root `DESIGN.md` implementation spec to keep concepts focused on MVP needs.
+
+---
+
+## Artifact Overload
+
+### Severity
+
+🟡 Medium
+
+### Mitigation
+
+Curate featured evidence and keep homepage/artifact pages independently understandable.
 
 ---
 
@@ -398,13 +432,15 @@ Status: Complete
 
 ---
 
-## Planned
-
 ### A-002
 
 Experience & Design Review
 
+Status: Complete
+
 ---
+
+## Planned
 
 ### A-003
 
@@ -428,35 +464,31 @@ Launch Review
 
 ## Current Phase
 
-Phase 1B — Experience Definition
+Phase 1C — Visual Exploration
 
 Focus:
 
-- Audit #002
-- Visual Exploration Readiness
+- MVP Visual Concepts
 - MVP Implementation Planning
+- Content Ownership Model
 - Analytics Provider Selection
 
 ---
 
 ## Next Phase
 
-Phase 1C — Visual Exploration
+Phase 1D — MVP Build
 
 Focus:
 
-- Google Stitch
-- Design Exploration
-- Figma Refinement
-- Design System Foundation
+- Next.js Application
+- Content System
+- Artifact Viewer
+- Deployment
 
 ---
 
 ## Future Phases
-
-### Phase 1D
-
-MVP Build
 
 ### Phase 1E
 
@@ -500,9 +532,14 @@ Expansion & Iteration
 
 ## Design
 
-- Visual language direction?
-- Component strategy?
-- Responsive behavior standards?
+- Preferred visual concept?
+- Final UI polish standard?
+
+---
+
+## Content
+
+- What content appears on the website, in the repository, or in both?
 
 ---
 
@@ -518,31 +555,31 @@ Expansion & Iteration
 
 ## 1
 
-Complete Audit #002 — Experience & Design Review.
+Freeze MVP scope.
 
 ---
 
 ## 2
 
-Begin Visual Exploration.
+Generate MVP visual concepts.
 
 ---
 
 ## 3
 
-Define Design System Foundation.
+Select preferred visual direction.
 
 ---
 
 ## 4
 
-Create MVP Implementation Plan.
+Finalize content ownership model.
 
 ---
 
 ## 5
 
-Select final analytics provider.
+Create MVP Implementation Plan.
 
 ---
 

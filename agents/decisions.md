@@ -416,6 +416,29 @@ Implications:
 
 ---
 
+# DEC-017
+
+Title: MVP visual direction will use the Product Studio model.
+
+Status: Accepted
+
+Decision Date: 2026-05-30
+
+Summary:
+
+The Wild Free Gallery MVP will use a Product Studio visual direction with a subtle creative layer.
+
+This direction balances product leadership, engineering execution, AI-native workflows, and creative identity without allowing decorative expression to overwhelm evidence.
+
+Implications:
+
+- Visual exploration should build from the approved design system foundation.
+- The experience should prioritize clarity, readability, trust, and evidence.
+- Bizarro and creative elements should remain subtle and supportive.
+- The root `DESIGN.md` file serves as an implementation-facing design specification.
+
+---
+
 # Open Governance Topics
 
 The following decisions remain unresolved and should eventually receive ADRs or accepted decisions:

@@ -28,7 +28,7 @@ When artifacts conflict, resolve inconsistencies using this order:
 2. Current operational state in `agents/current-state.md`
 3. Active dashboard in `docs/dashboard/`
 4. Approved strategy and product artifacts in `docs/`
-5. Completed audits in `audits/`
+5. Completed audits in `docs/audits/`
 6. Git history
 7. Conversation context
 
@@ -47,7 +47,7 @@ Before making documentation updates, review:
 For milestone, audit, or roadmap changes, also review:
 
 - `docs/roadmap/`
-- `audits/`
+- `docs/audits/`
 
 ## Stewardship Triggers
 
@@ -151,7 +151,7 @@ Audit updates should ensure:
 - Audit outcomes are reflected in next actions
 - Audit recommendations are not lost
 
-Audits should live under `audits/`.
+Audits should live under `docs/audits/`.
 
 ## Milestone Tracking
 
