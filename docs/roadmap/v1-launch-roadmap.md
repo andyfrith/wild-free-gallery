@@ -56,6 +56,8 @@ Phase 1C — Visual Exploration
 - Design System Foundation
 - DESIGN.md Implementation Specification
 - Audit #002 — Experience & Design Review
+- MVP Visual Exploration v0.1
+- AGENTS.md
 
 ---
 
@@ -362,7 +364,7 @@ Favor clarity over novelty.
 # Next Immediate Actions
 
 1. Freeze MVP scope
-2. Generate MVP visual concepts
+2. Review MVP Visual Exploration v0.1
 3. Select preferred visual direction
 4. Finalize content ownership model
 5. Create MVP Implementation Plan

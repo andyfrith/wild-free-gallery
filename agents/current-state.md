@@ -32,6 +32,7 @@ Create MVP visual concepts, finalize content structure, and prepare the MVP impl
 2. MVP Implementation Plan
 3. Content Ownership Model
 4. Analytics Provider Selection
+5. MVP Visual Exploration Review
 
 ## Recently Completed
 
@@ -50,6 +51,8 @@ Create MVP visual concepts, finalize content structure, and prepare the MVP impl
 - Design System Foundation
 - DESIGN.md implementation specification
 - Audit #002 — Experience & Design Review
+- MVP Visual Exploration v0.1
+- AGENTS.md
 
 ## Active Risks
 
@@ -68,12 +71,13 @@ Create MVP visual concepts, finalize content structure, and prepare the MVP impl
 - Detailed MVP implementation sequencing
 - Final visual concept selection
 - Content ownership model
+- Visual token finalization
 
 ## Next Actions
 
-1. Freeze MVP scope
-2. Generate MVP visual concepts
-3. Select preferred visual direction
+1. Review MVP Visual Exploration v0.1
+2. Select preferred visual direction
+3. Freeze MVP visual scope
 4. Finalize content ownership model
 5. Create MVP Implementation Plan
 

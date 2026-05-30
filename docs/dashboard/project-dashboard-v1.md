@@ -153,6 +153,8 @@ Completed:
 - Design System Foundation
 - DESIGN.md implementation specification
 - Audit #002 — Experience & Design Review
+- MVP Visual Exploration v0.1
+- AGENTS.md
 
 ### Outcome
 
@@ -166,10 +168,14 @@ A complete governance, planning, and operational foundation has been established
 
 In Progress:
 
-- MVP implementation planning
 - MVP visual concept exploration
+- MVP implementation planning
 - Content ownership model
 - Analytics provider selection
+
+Started:
+
+- MVP Visual Exploration v0.1
 
 ---
 
@@ -202,6 +208,8 @@ In Progress:
 - Design System Foundation
 - DESIGN.md implementation specification
 - Audit #002 — Experience & Design Review
+- MVP Visual Exploration v0.1
+- AGENTS.md
 
 ---
 
@@ -252,6 +260,8 @@ In Progress:
 | Design System Foundation         | Complete    |
 | DESIGN.md Implementation Spec    | Complete    |
 | Audit #002                       | Complete    |
+| MVP Visual Exploration           | Draft       |
+| AGENTS.md                        | Complete    |
 | MVP Build Plan                   | Planned     |
 | Launch Review Audit              | Planned     |
 
@@ -310,6 +320,8 @@ The project is already producing portfolio-quality artifacts despite implementat
 - Design System Foundation
 - DESIGN.md Implementation Specification
 - Audit #002 Experience & Design Review
+- MVP Visual Exploration v0.1
+- AGENTS.md
 
 ### Observation
 
@@ -333,6 +345,7 @@ This remains one of the strongest differentiators of the Wild Free Gallery appro
 | Smallest Credible Launch   | Protects scope and maintains momentum          |
 | Static-First MVP Architecture | Resolves stack, hosting, and implementation path |
 | Product Studio Visual Direction | Guides visual exploration without overwhelming evidence |
+| Root Agent Instructions | Creates a canonical agent entry point |
 
 ### Assessment
 
@@ -561,7 +574,7 @@ Freeze MVP scope.
 
 ## 2
 
-Generate MVP visual concepts.
+Review MVP Visual Exploration v0.1.
 
 ---
 

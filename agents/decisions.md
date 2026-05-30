@@ -439,6 +439,28 @@ Implications:
 
 ---
 
+# DEC-018
+
+Title: Repository will maintain root agent instructions.
+
+Status: Accepted
+
+Decision Date: 2026-05-30
+
+Summary:
+
+The repository will maintain `AGENTS.md` as the root-level instruction file for AI agents working on Wild Free Gallery.
+
+The file provides mission context, required reading order, product principles, design references, development rules, documentation stewardship expectations, and audit philosophy.
+
+Implications:
+
+- Agents have a discoverable entry point before reading deeper project artifacts.
+- `AGENTS.md` should stay aligned with `agents/project-context.md`, `agents/current-state.md`, `agents/decisions.md`, and the project dashboard.
+- Significant changes to agent workflow expectations should update both `AGENTS.md` and the relevant governance artifacts.
+
+---
+
 # Open Governance Topics
 
 The following decisions remain unresolved and should eventually receive ADRs or accepted decisions:
