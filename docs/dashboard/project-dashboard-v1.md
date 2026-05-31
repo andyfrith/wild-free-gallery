@@ -3,9 +3,9 @@
 **Project:** Wild Free Gallery
 **Document:** Project Dashboard
 **Location:** docs/dashboard/project-dashboard-v1.md
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Active
-**Last Updated:** 2026-05-30
+**Last Updated:** 2026-05-31
 
 ---
 
@@ -15,7 +15,7 @@ Wild Free Gallery is a real creative business, public product case study, and de
 
 The project exists to document the complete journey from idea to execution through strategy, design, engineering, AI collaboration, audits, and continuous learning.
 
-Foundation, experience definition, technical architecture, and design system foundation activities have been completed. The project is now entering Visual Exploration while preparing MVP implementation.
+Foundation, experience definition, visual exploration, and design system work are complete. The project is in **Phase 1D — MVP Build**: implementing and verifying the Next.js application in `website/`.
 
 The immediate objective is to launch a polished MVP within approximately one week while maintaining high standards of product quality, design quality, engineering quality, communication quality, and documentation quality.
 
@@ -112,21 +112,20 @@ The project story is becoming increasingly coherent through the Charter, PRD, In
 
 # Current Phase
 
-## Phase 1C — Visual Exploration
+## Phase 1D — MVP Build
 
 ### Objective
 
-Create MVP visual concepts, finalize content structure, and prepare for MVP implementation.
+Build, verify, and deploy the MVP web application.
 
 ### Success Criteria
 
-- UX Blueprint approved
-- Core user journeys documented
-- Wireframes completed
-- Technical approach defined
-- Design system foundation approved
-- Experience review completed
-- Preferred visual direction selected
+- Next.js application scaffolded and building
+- All 5 pages implemented (Home, Story, Journey, Artifacts, About)
+- Design system tokens applied
+- Navigation and footer present on all pages
+- Build compiles without errors
+- Deployment configured for Vercel
 
 ---
 
@@ -164,26 +163,27 @@ A complete governance, planning, and operational foundation has been established
 
 ## Current Focus
 
-🟡 Visual Exploration & MVP Build Planning
+🟡 MVP Build — baseline UI complete; launch blockers remain
 
 In Progress:
 
-- MVP visual concept exploration
-- MVP implementation planning
-- Content ownership model
-- Analytics provider selection
+- Visual baseline sign-off (`website/docs/VISUAL-REVIEW.md`)
+- Production content (replace placeholder copy per Audit A-003)
+- Deployment and analytics
 
-Started:
+Completed:
 
-- MVP Visual Exploration v0.1
+- Next.js app: five routes, section components, design tokens, unified nav/footer (DEC-020)
+- Cinematic Light concepts archived; Audit #003 — MVP Build Review
+- Application architecture documented (`website/FOUNDATION.md`, DEC-019)
 
 ---
 
 ## Upcoming Milestones
 
-⚪ Preferred Visual Direction Selected
+✅ Preferred Visual Direction Selected — Cinematic Light
 
-⚪ MVP Build Started
+✅ MVP Build Started
 
 ⚪ Public Launch
 
@@ -235,8 +235,8 @@ Started:
 | ----------------------- | -------------- | -------- |
 | Foundation & Governance | ✅ Complete    | Phase 1A |
 | Experience Definition   | ✅ Complete    | Phase 1B |
-| Visual Exploration      | 🟡 In Progress | Phase 1C |
-| MVP Build               | ⚪ Planned     | Phase 1D |
+| Visual Exploration      | ✅ Complete    | Phase 1C |
+| MVP Build               | 🟡 In Progress | Phase 1D |
 | Public Launch           | ⚪ Planned     | Phase 1E |
 
 ---
@@ -260,9 +260,11 @@ Started:
 | Design System Foundation         | Complete    |
 | DESIGN.md Implementation Spec    | Complete    |
 | Audit #002                       | Complete    |
-| MVP Visual Exploration           | Draft       |
+| MVP Visual Exploration           | Complete    |
 | AGENTS.md                        | Complete    |
-| MVP Build Plan                   | Planned     |
+| Cinematic Light Concepts Archived| Complete    |
+| MVP Web App (Next.js)            | Baseline complete — production content pending |
+| Audit #003 — MVP Build Review    | Complete    |
 | Launch Review Audit              | Planned     |
 
 ---
@@ -303,7 +305,7 @@ Continue validating future work against established principles before introducin
 
 ## Assessment
 
-The project is already producing portfolio-quality artifacts despite implementation not yet beginning.
+The project is producing portfolio-quality artifacts; the MVP web application baseline is implemented in `website/` with launch gated on production content and deployment.
 
 ### Evidence Produced
 
@@ -457,7 +459,11 @@ Status: Complete
 
 ### A-003
 
-Visual Design Review
+MVP Build Review
+
+Status: Complete
+
+---
 
 ---
 
@@ -477,27 +483,26 @@ Launch Review
 
 ## Current Phase
 
-Phase 1C — Visual Exploration
+Phase 1D — MVP Build
 
 Focus:
 
-- MVP Visual Concepts
-- MVP Implementation Planning
-- Content Ownership Model
-- Analytics Provider Selection
+- Visual baseline sign-off
+- Production website content (evidence-backed)
+- Vercel deployment
+- Analytics provider selection
 
 ---
 
 ## Next Phase
 
-Phase 1D — MVP Build
+Phase 1E — Public Launch
 
 Focus:
 
-- Next.js Application
-- Content System
-- Artifact Viewer
-- Deployment
+- Public site live with accurate content
+- Basic accessibility verification
+- Optional Playwright e2e in CI
 
 ---
 
@@ -568,31 +573,31 @@ Expansion & Iteration
 
 ## 1
 
-Freeze MVP scope.
+Complete visual baseline sign-off on all five routes (`website/docs/VISUAL-REVIEW.md`).
 
 ---
 
 ## 2
 
-Review MVP Visual Exploration v0.1.
+Replace placeholder website copy with accurate, evidence-backed project content (required before launch).
 
 ---
 
 ## 3
 
-Select preferred visual direction.
+Deploy MVP to Vercel and verify production build.
 
 ---
 
 ## 4
 
-Finalize content ownership model.
+Select and integrate analytics provider.
 
 ---
 
 ## 5
 
-Create MVP Implementation Plan.
+After baseline agreed — add Playwright e2e and accessibility checks in CI.
 
 ---
 
@@ -607,7 +612,8 @@ If returning after 30+ days away from the project, review:
 5. docs/charter/program-charter.md
 6. docs/prd/wild-free-gallery-v1-prd.md
 7. docs/architecture/website-information-architecture.md
-8. Latest roadmap and audits
+8. website/FOUNDATION.md
+9. Latest roadmap and audits
 
 This sequence should restore project context within minutes.
 

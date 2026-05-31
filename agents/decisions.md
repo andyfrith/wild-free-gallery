@@ -1,6 +1,6 @@
 # agents/decisions.md
 
-Last Updated: 2026-05-30
+Last Updated: 2026-05-31
 
 Project: Wild Free Gallery
 
@@ -458,6 +458,64 @@ Implications:
 - Agents have a discoverable entry point before reading deeper project artifacts.
 - `AGENTS.md` should stay aligned with `agents/project-context.md`, `agents/current-state.md`, `agents/decisions.md`, and the project dashboard.
 - Significant changes to agent workflow expectations should update both `AGENTS.md` and the relevant governance artifacts.
+
+---
+
+# DEC-019
+
+Title: Design tools produce references; the website application is the source of truth.
+
+Status: Accepted
+
+Decision Date: 2026-05-31
+
+Summary:
+
+Google Stitch, Figma, and similar tools are used for visual design exploration only. They do not define application architecture, component structure, or runtime behavior.
+
+The Wild Free Gallery website is a robust Next.js/React application built to best practices:
+
+- Composable React components
+- CSS design tokens as the styling foundation
+- React-native animation patterns (shared utilities and hooks)
+- Static-first architecture per DEC-016
+
+When new designs or design improvements are produced, they are integrated into the existing application architecture — mapped to tokens, components, and pages — rather than pasted or regenerated wholesale from export HTML.
+
+Stitch HTML archives in `assets/visual-exploration/` are fidelity references. The maintained codebase in `website/src/` is authoritative.
+
+Rationale:
+
+- Design exports optimize for visual mockup, not maintainability, accessibility, or performance.
+- A token-driven component architecture supports periodic design updates without structural rewrites.
+- Separating design input from application output prevents implementation drift and scope confusion.
+
+Implications:
+
+- `website/FOUNDATION.md` is the canonical website architecture document.
+- `stitch-to-tsx.py` remains a draft/diff aid only.
+- Agents and contributors implement designs through components and tokens, not HTML transplant.
+- Visual comparison (`website/comparison/`) verifies fidelity; it does not drive architecture.
+
+---
+
+# DEC-020
+
+Title: MVP shell uses one global Navigation and Footer on every route.
+
+Status: Accepted
+
+Decision Date: 2026-05-31
+
+Summary:
+
+Per-page Stitch variants for the header and footer created inconsistent layout, typography, CTAs, and spacing across routes. The MVP application uses a single `Navigation` and `Footer` component shared from the root layout, with page themes applied to content only via `PageThemeShell`.
+
+Implications:
+
+- No `FooterVariant` or per-route nav style maps in production code.
+- Shell components live in `website/src/components/` and follow `website/FOUNDATION.md`.
+- Visual comparison against Stitch remains valid for page content, not for duplicating per-screen chrome.
 
 ---
 

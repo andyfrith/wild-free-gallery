@@ -1,0 +1,28 @@
+# Tooling
+opencode.json
+
+# Editor (local)
+.vscode/
+
+# OS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Website (Next.js)
+website/.next/
+website/out/
+website/node_modules/
+website/comparison/node_modules/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# TypeScript build info (generated)
+*.tsbuildinfo

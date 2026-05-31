@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wild Free Gallery | Living Product Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002019",
+                    "tertiary-container": "#794c44",
+                    "text-primary": "#111827",
+                    "outline": "#717975",
+                    "surface-container-highest": "#e2e3e0",
+                    "on-secondary-container": "#7a4d38",
+                    "surface-dim": "#d9dad8",
+                    "on-tertiary-fixed": "#32120c",
+                    "on-tertiary-container": "#fcc0b5",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#abd7c9",
+                    "bg-secondary": "#ECEFEB",
+                    "surface-variant": "#e2e3e0",
+                    "primary-fixed-dim": "#a4d0c2",
+                    "background": "#f9f9f7",
+                    "on-secondary-fixed": "#321203",
+                    "on-surface": "#1a1c1b",
+                    "bg-primary": "#F7F8F6",
+                    "text-muted": "#6B7280",
+                    "semantic-warning": "#A16207",
+                    "secondary": "#82533d",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#5e352e",
+                    "bg-surface": "#FFFFFF",
+                    "inverse-on-surface": "#f0f1ef",
+                    "secondary-fixed": "#ffdbcc",
+                    "semantic-success": "#2F7D5C",
+                    "bg-subtle": "#F2F4F1",
+                    "on-secondary-fixed-variant": "#663c28",
+                    "accent-info": "#386C8F",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1a1c1b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#414845",
+                    "text-secondary": "#4B5563",
+                    "primary-fixed": "#bfecdd",
+                    "surface-container-low": "#f3f4f1",
+                    "primary-container": "#365f54",
+                    "on-primary-fixed-variant": "#254e44",
+                    "tertiary-fixed": "#ffdad4",
+                    "tertiary-fixed-dim": "#f4b8ae",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#ffc1a6",
+                    "secondary-fixed-dim": "#f6b99e",
+                    "semantic-error": "#B42318",
+                    "inverse-primary": "#a4d0c2",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#663c34",
+                    "surface-container-high": "#e8e8e6",
+                    "on-error-container": "#93000a",
+                    "primary": "#1d473d",
+                    "inverse-surface": "#2f3130",
+                    "surface-bright": "#f9f9f7",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#c0c8c4",
+                    "surface-tint": "#3d665b",
+                    "surface-container": "#eeeeec",
+                    "surface": "#f9f9f7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "sm": "8px",
+                    "3xl": "64px",
+                    "2xl": "48px",
+                    "max-reading-width": "760px",
+                    "lg": "24px",
+                    "xs": "4px",
+                    "4xl": "96px",
+                    "xl": "32px",
+                    "max-content-width": "1200px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Manrope"],
+                    "headline-sm-mobile": ["Manrope"],
+                    "headline-sm": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "headline-md-mobile": ["Manrope"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["48px", {"lineHeight": "1.15", "fontWeight": "700"}],
+                    "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-lg": ["72px", {"lineHeight": "1.05", "fontWeight": "800"}],
+                    "headline-sm-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-sm": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["19px", {"lineHeight": "1.7", "fontWeight": "400"}],
+                    "headline-md-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { 
+            background-color: #f9f9f7; 
+            -webkit-font-smoothing: antialiased;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png"); /* Subtle paper grain texture */
+            background-attachment: fixed;
+        }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(12px); }
+        .editorial-spacing { letter-spacing: -0.02em; }
+        .label-spacing { letter-spacing: 0.1em; }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(249, 249, 247, 0) 0%, #f9f9f7 100%); }
+    </style>
+</head>
+<body class="font-body-md text-body-md text-text-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/20">
+<nav class="flex justify-between items-center w-full px-lg py-md max-w-content-width mx-auto">
+<div class="font-headline-sm text-[24px] font-extrabold tracking-tighter text-text-primary">Wild Free Gallery</div>
+<div class="hidden md:flex gap-xl items-center">
+<a class="text-text-primary font-bold border-b-2 border-primary font-body-md text-body-md hover:text-primary transition-colors py-1" href="#">Home</a>
+<a class="text-text-secondary font-body-md text-body-md hover:text-primary transition-colors" href="#">Story</a>
+<a class="text-text-secondary font-body-md text-body-md hover:text-primary transition-colors" href="#">Journey</a>
+<a class="text-text-secondary font-body-md text-body-md hover:text-primary transition-colors" href="#">Artifacts</a>
+<a class="text-text-secondary font-body-md text-body-md hover:text-primary transition-colors" href="#">About</a>
+</div>
+<a class="px-lg py-sm bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:opacity-90 transition-opacity tracking-tight" href="#">View Source</a>
+</nav>
+</header>
+<main class="pt-[72px]">
+<!-- Atmospheric Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Studio at Daybreak" class="w-full h-full object-cover opacity-30 scale-105 transition-transform duration-[10s] ease-out hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABLR1nzU6S8qxU15M3NGzWzvs2bGFNJ_URpPiyWK9TM63g-l7Ku17I2N5l331pX2GJwhz_dqwRrRCSK1Z2cPgsYwT_p6S-0H60zpEVZgIywzZV-QbU0n6XAtPvjX6vEgmTua4FWawHJ8inXMgMDWEXNG1cnBP0VWoy--pRhJk3ZQvXdqoFHcpURa3LHRK3Y3GClSWSjY2Fock4OBIvBX1IIIpyGmVZyk3y7qU4-0Ke7DLjRg2TEDzbekXDDdo8LyfNsqANCQc6iOIg"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-content-width mx-auto px-lg pt-4xl pb-3xl">
+<div class="max-w-max-reading-width">
+<div class="inline-flex items-center gap-xs px-md py-1 bg-primary text-white rounded-full text-label-sm font-medium label-spacing uppercase mb-lg">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+                    Active Discovery Phase
+                </div>
+<h1 class="font-headline-lg text-headline-lg mb-md text-text-primary leading-[1.05] editorial-spacing">
+                    A living product studio documenting the transformation of <span class="text-primary font-medium italic">ideas</span> into <span class="font-black">reality.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-text-secondary mb-xl max-w-[640px] leading-relaxed">
+                    Where human intuition meets machine execution. We operate as an open-ledger for methodology, experiments, and the final artifacts of innovation.
+                </p>
+<div class="flex flex-wrap gap-md">
+<button class="px-xl py-md bg-primary text-on-primary rounded-xl font-semibold text-body-lg hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-sm">
+                        Explore Journey
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="px-xl py-md bg-white/50 backdrop-blur-sm text-text-primary rounded-xl border border-outline-variant font-semibold text-body-lg hover:bg-white transition-all">
+                        View Artifacts
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Disciplined Progress Dashboard -->
+<section class="bg-white border-y border-outline-variant relative z-10 shadow-sm">
+<div class="max-w-content-width mx-auto px-lg py-xl">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-xl">
+<div class="flex flex-col border-l border-primary/20 pl-md">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-[0.15em] mb-xs">Current Phase</span>
+<span class="font-headline-sm text-[28px] text-primary editorial-spacing font-bold">01 Exploration</span>
+</div>
+<div class="flex flex-col border-l border-outline-variant/30 pl-md">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-[0.15em] mb-xs">Health</span>
+<div class="flex items-center gap-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-semantic-success animate-pulse"></span>
+<span class="font-headline-sm text-[28px] text-text-primary editorial-spacing font-medium">Nominal</span>
+</div>
+</div>
+<div class="flex flex-col border-l border-outline-variant/30 pl-md">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-[0.15em] mb-xs">Objective</span>
+<span class="font-headline-sm text-[28px] text-text-primary editorial-spacing font-medium">MVP Definition</span>
+</div>
+<div class="flex flex-col border-l border-outline-variant/30 pl-md">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-[0.15em] mb-xs">Milestone</span>
+<span class="font-headline-sm text-[28px] text-text-primary editorial-spacing font-medium">85% Complete</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Why This Exists -->
+<section class="max-w-content-width mx-auto px-lg py-4xl">
+<div class="grid md:grid-cols-2 gap-3xl items-start">
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary mb-lg editorial-spacing">A New Paradigm <br/><span class="text-text-muted font-light italic">of Proof.</span></h2>
+<p class="font-body-lg text-body-lg text-text-secondary leading-relaxed mb-lg">
+                    Traditional studios hide their mess. They present polished results while obscuring the pivotal mistakes and breakthroughs that led there. Wild Free Gallery flips the script—inviting you into the workshop as we build.
+                </p>
+<div class="h-px w-24 bg-primary/30 mb-lg"></div>
+</div>
+<div class="flex flex-col gap-lg border-l-2 border-outline-variant/20 pl-2xl py-2">
+<p class="font-body-md text-body-lg text-text-secondary leading-relaxed">
+                    Our mission is to prove that "AI-Native" isn't just a buzzword, but a fundamental shift in how small, focused teams can outpace established giants. We document every step from the initial spark to the deployed product.
+                </p>
+<ul class="flex flex-col gap-md">
+<li class="flex items-center gap-md text-text-primary font-medium group">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">check_circle</span>
+<span class="text-body-md">Evidence-led decision making</span>
+</li>
+<li class="flex items-center gap-md text-text-primary font-medium group">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">check_circle</span>
+<span class="text-body-md">Radical transparency in process</span>
+</li>
+<li class="flex items-center gap-md text-text-primary font-medium group">
+<span class="material-symbols-outlined text-primary text-2xl group-hover:scale-110 transition-transform">check_circle</span>
+<span class="text-body-md">Open-source architecture models</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- High-Contrast Featured Artifacts -->
+<section class="bg-surface-container-high/50 border-y border-outline-variant/30 py-4xl">
+<div class="max-w-content-width mx-auto px-lg">
+<div class="flex justify-between items-end mb-2xl">
+<div>
+<h2 class="font-headline-md text-headline-md text-text-primary editorial-spacing">Recent Artifacts</h2>
+<p class="font-body-md text-body-md text-text-secondary mt-1">The tangible outputs of our current phase.</p>
+</div>
+<a class="text-primary font-bold text-label-md flex items-center gap-xs border-b-2 border-primary/20 hover:border-primary pb-1 transition-all" href="#">View Full Archive</a>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-lg">
+<!-- Artifact Card 1 -->
+<div class="bg-white p-lg rounded-2xl border border-outline-variant/40 hover:shadow-2xl hover:border-primary/20 transition-all group cursor-pointer overflow-hidden">
+<div class="aspect-[4/3] bg-bg-secondary rounded-xl mb-md overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGf7rp9WhwfeFoE7qiktoVZKGLZ6GocW_64lc0PRhTbEwRPhSv3ivuDDk3pSGtzoTFjUib1_RfByK4KIuDTrzMCCdcYqZuBmX8tWL6DdNiBlwV0VOlIJrKbXqOPT5OhhehuUxOAHkTyJRgONLntbWa-Edy-oxFnRHth4n3zTzGs4DVFLi9byI5_HU9w_i-RbI5WysplojRqX0ikC2FE-fcV-oFy-L6bDa3j5PekrhQ7SabohzSd84A0d6X531W-rK4SN57kQR-PBe4"/>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold label-spacing mb-xs block">Document</span>
+<h3 class="font-headline-sm-mobile text-xl text-text-primary font-bold editorial-spacing mb-sm">Studio Charter</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-md line-clamp-2">Defining the core principles and operational boundaries of the WFG ecosystem.</p>
+<div class="flex items-center gap-xs text-text-muted border-t border-outline-variant/20 pt-md">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="text-[12px] font-medium uppercase tracking-wider">Oct 12, 2023</span>
+</div>
+</div>
+<!-- Artifact Card 2 -->
+<div class="bg-white p-lg rounded-2xl border border-outline-variant/40 hover:shadow-2xl hover:border-primary/20 transition-all group cursor-pointer">
+<div class="aspect-[4/3] bg-bg-secondary rounded-xl mb-md overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByWXiQiWYFUvM0Dye-zV8ly4mfV583xCmcjVowJEAN1r486NNEtI2Ge-yflf2m6bBfvipBHH2tFZdSXBrDl6FR71iWE3r_vLeFk1jhGQplDCspixgolR3mq9toSV4644Vf65SKZj9uQYZmGQv5TF--uEcr5oWwHifkxHjze9aeTERuQshf6dOzxjkTDOLQb-jV05_hRRKw9tY3zkg5Kcp7ud1cwiiuIpCcs_gLm6I6AdfPKHX03lAlpwY6oAw2veYtIpihiLglD9Oi"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold label-spacing mb-xs block">Strategic</span>
+<h3 class="font-headline-sm-mobile text-xl text-text-primary font-bold editorial-spacing mb-sm">Product PRD</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-md line-clamp-2">A comprehensive breakdown of requirements for the first flagship artifact.</p>
+<div class="flex items-center gap-xs text-text-muted border-t border-outline-variant/20 pt-md">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="text-[12px] font-medium uppercase tracking-wider">Oct 10, 2023</span>
+</div>
+</div>
+<!-- Artifact Card 3 -->
+<div class="bg-white p-lg rounded-2xl border border-outline-variant/40 hover:shadow-2xl hover:border-primary/20 transition-all group cursor-pointer">
+<div class="aspect-[4/3] bg-bg-secondary rounded-xl mb-md overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ9tkZJONiiELxevDSER-OYkAJX6tC3EDTF9ISZK3p7ypy4XLUmedoZheMLznSNUShHtIIKpNjWyjyLeqIdnPqhGm1m-A9HvQeCJ9_WGy53dK06Qf49MiSjQNB-t9AX7fTLPHwwzi-GTkMh49khYivlLRNnEzbVmrDJR09bXtmaebOQ4pv_ATvnj6QrVj0qzmG7M3Ea89YkzIiDsZMWHz4mk6j7mK-aajW2ZE-k3PY3Ni-tnvlZGuhHzt0NJm8uhTbTZ5L4DoNbcYp"/>
+</div>
+<span class="font-label-sm text-label-sm text-accent-info uppercase font-bold label-spacing mb-xs block">Architecture</span>
+<h3 class="font-headline-sm-mobile text-xl text-text-primary font-bold editorial-spacing mb-sm">System IA</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-md line-clamp-2">The structural backbone mapping data flows across the entire platform.</p>
+<div class="flex items-center gap-xs text-text-muted border-t border-outline-variant/20 pt-md">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="text-[12px] font-medium uppercase tracking-wider">Oct 08, 2023</span>
+</div>
+</div>
+<!-- Artifact Card 4 -->
+<div class="bg-white p-lg rounded-2xl border border-outline-variant/40 hover:shadow-2xl hover:border-primary/20 transition-all group cursor-pointer">
+<div class="aspect-[4/3] bg-bg-secondary rounded-xl mb-md overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCPmsjhTXUkzVPssPzi2DBIuxtfhk4JABXHgu9uQlM7gO2uW2o-bKDUt7OuIP78TSbyk7rb0KEINvgSlu_Ag3IEC9doGHfOjN8fF__C358xlQYPe8nHxJecCDe9LGUWTLO0TC87y-McBpBZ-7Ik9yqpKcl3mKqNd-fvHZB3uXHt_AVnck83iJsVL-U7LhBUaHXezxpqaZ7SQJijSNGQSGYO5CtkHhvz7AhF1ZyPt_s9NXNtFmxwOj49LljvaG_YatmhMDCyMzLXOo0"/>
+</div>
+<span class="font-label-sm text-label-sm text-semantic-success uppercase font-bold label-spacing mb-xs block">Experience</span>
+<h3 class="font-headline-sm-mobile text-xl text-text-primary font-bold editorial-spacing mb-sm">UX Blueprint</h3>
+<p class="font-body-md text-body-md text-text-secondary mb-md line-clamp-2">Initial wireframes and interaction patterns for user-centric validation.</p>
+<div class="flex items-center gap-xs text-text-muted border-t border-outline-variant/20 pt-md">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="text-[12px] font-medium uppercase tracking-wider">Oct 05, 2023</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Journey Snapshot -->
+<section class="max-w-content-width mx-auto px-lg py-4xl">
+<div class="flex flex-col md:flex-row gap-3xl">
+<div class="md:w-1/3">
+<h2 class="font-headline-md text-headline-md text-text-primary mb-md editorial-spacing">Journey <br/><span class="italic font-light">Snapshot</span></h2>
+<p class="font-body-md text-body-md text-text-secondary mb-lg leading-relaxed">Tracking the real-time evolution of our current sprint cycle with radical honesty.</p>
+<button class="flex items-center gap-sm text-primary font-bold group">
+<span class="border-b-2 border-primary/20 group-hover:border-primary transition-all pb-1">Timeline Archive</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="md:w-2/3 space-y-md">
+<div class="relative pl-lg border-l-2 border-primary">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary ring-4 ring-white"></div>
+<div class="bg-white p-lg rounded-2xl shadow-sm border border-outline-variant/30">
+<div class="flex justify-between items-center mb-xs">
+<span class="text-[11px] font-bold text-primary uppercase label-spacing">Latest Milestone</span>
+<span class="text-label-sm font-label-sm text-text-muted">Oct 24, 2023</span>
+</div>
+<h4 class="font-headline-sm-mobile text-xl font-bold text-text-primary editorial-spacing mb-xs">Foundational Model Selected</h4>
+<p class="font-body-md text-body-md text-text-secondary">Successfully benchmarked 4 LLMs for specific logic tasks. Moving forward with a hybrid orchestration layer for the core engine.</p>
+</div>
+</div>
+<div class="relative pl-lg border-l-2 border-outline-variant/30 opacity-60">
+<div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-outline-variant ring-4 ring-white"></div>
+<div class="p-lg">
+<div class="flex justify-between items-center mb-xs">
+<span class="text-[11px] font-bold text-text-muted uppercase label-spacing">Previous</span>
+<span class="text-label-sm font-label-sm text-text-muted">Oct 19, 2023</span>
+</div>
+<h4 class="font-headline-sm-mobile text-xl font-bold text-text-primary editorial-spacing mb-xs">Stakeholder Synthesis</h4>
+<p class="font-body-md text-body-md text-text-secondary">Completed interview series with 12 industry veterans to validate core pain points and architectural direction.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Artistic Symbiotic Studio -->
+<section class="bg-[#1d473d] text-on-primary py-4xl relative overflow-hidden">
+<!-- Subtle artistic overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+<div class="max-w-content-width mx-auto px-lg relative z-10">
+<div class="max-w-max-reading-width mx-auto text-center mb-3xl">
+<h2 class="font-headline-md text-headline-md text-white mb-md editorial-spacing">The <span class="italic font-light">Symbiotic</span> Studio</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container/90 max-w-[600px] mx-auto">We define clear boundaries for human creativity and machine scale. This division of labor is our secret weapon.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-2xl">
+<div class="bg-white/5 backdrop-blur-md p-2xl rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+<div class="flex items-center gap-md mb-lg">
+<span class="material-symbols-outlined text-5xl text-primary-fixed font-thin">person</span>
+<h3 class="font-headline-sm text-2xl text-white editorial-spacing font-semibold">Human Domain</h3>
+</div>
+<ul class="space-y-md">
+<li class="flex items-start gap-md group">
+<span class="material-symbols-outlined text-primary-fixed mt-1 group-hover:scale-125 transition-transform">verified</span>
+<span class="font-medium">Strategic Intent &amp; Mission Alignment</span>
+</li>
+<li class="flex items-start gap-md group">
+<span class="material-symbols-outlined text-primary-fixed mt-1 group-hover:scale-125 transition-transform">verified</span>
+<span class="font-medium">Ethical Guardrails &amp; Value Judgments</span>
+</li>
+<li class="flex items-start gap-md group">
+<span class="material-symbols-outlined text-primary-fixed mt-1 group-hover:scale-125 transition-transform">verified</span>
+<span class="font-medium">Emotional Resonance &amp; Brand Soul</span>
+</li>
+<li class="flex items-start gap-md group">
+<span class="material-symbols-outlined text-primary-fixed mt-1 group-hover:scale-125 transition-transform">verified</span>
+<span class="font-medium">High-Stakes Architecture Decisions</span>
+</li>
+</ul>
+</div>
+<div class="bg-white/5 backdrop-blur-md p-2xl rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+<div class="flex items-center gap-md mb-lg">
+<span class="material-symbols-outlined text-5xl text-primary-fixed font-thin">smart_toy</span>
+<h3 class="font-headline-sm text-2xl text-white editorial-spacing font-semibold">AI Domain</h3>
+</div>
+<ul class="space-y-md">
+<li class="flex items-start gap-md group">
+<span class="material-symbols-outlined text-primary-fixed mt-1 group-hover:scale-125 transition-transform">verified</span>
+<span class="font-medium">Rapid Component Prototyping</span>
+</li>
+<li class="flex items-start gap-md group">
+<span class="material-symbols-outlined text-primary-fixed mt-1 group-hover:scale-125 transition-transform">verified</span>
+<span class="font-medium">Synthetic User Path Simulation</span>
+</li>
+<li class="flex items-start gap-md group">
+<span class="material-symbols-outlined text-primary-fixed mt-1 group-hover:scale-125 transition-transform">verified</span>
+<span class="font-medium">Code Base Generation &amp; Refactoring</span>
+</li>
+<li class="flex items-start gap-md group">
+<span class="material-symbols-outlined text-primary-fixed mt-1 group-hover:scale-125 transition-transform">verified</span>
+<span class="font-medium">Automated Quality Assurance</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container mt-4xl py-2xl">
+<div class="flex flex-col gap-lg w-full px-lg max-w-content-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-xl">
+<div class="font-headline-sm text-[28px] font-extrabold tracking-tighter text-text-primary">Wild Free Gallery</div>
+<div class="flex flex-wrap gap-xl">
+<a class="text-text-primary font-bold underline decoration-primary/30 underline-offset-4 hover:decoration-primary transition-all" href="#">Home</a>
+<a class="text-text-secondary font-medium hover:text-text-primary transition-colors" href="#">Story</a>
+<a class="text-text-secondary font-medium hover:text-text-primary transition-colors" href="#">Journey</a>
+<a class="text-text-secondary font-medium hover:text-text-primary transition-colors" href="#">Artifacts</a>
+<a class="text-text-secondary font-medium hover:text-text-primary transition-colors" href="#">About</a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center pt-xl border-t border-outline-variant/30">
+<p class="text-[12px] uppercase font-bold tracking-[0.2em] text-text-muted">Wild Free Gallery © 2023. Build-in-Public Studio.</p>
+<div class="flex items-center gap-md mt-md md:mt-0">
+<span class="w-2 h-2 rounded-full bg-semantic-success"></span>
+<span class="text-[11px] font-bold uppercase tracking-[0.1em] text-text-muted">Studio Systems Operating Normally</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Parallax and scroll effects
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        
+        // Hero image parallax
+        const heroImg = document.querySelector('.relative.z-0 img');
+        if (heroImg) {
+            heroImg.style.transform = `translateY(${scrolled * 0.3}px) scale(${1.05 + scrolled * 0.0001})`;
+        }
+
+        // Hero content subtle fade/lift
+        const heroContent = document.querySelector('.relative.z-10.max-w-content-width');
+        if (heroContent) {
+            heroContent.style.opacity = 1 - (scrolled * 0.0015);
+            heroContent.style.transform = `translateY(${scrolled * 0.1}px)`;
+        }
+    });
+
+    // Card interactions
+    const artifactCards = document.querySelectorAll('.group.cursor-pointer');
+    artifactCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-8px)';
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0)';
+        });
+    });
+</script>
+</body></html>

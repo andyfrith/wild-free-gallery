@@ -31,6 +31,26 @@ Primary design documents:
 - docs/design/v1-user-experience-blueprint.md
 - docs/design/v1-wireframe-specification.md
 
+Visual exploration archives (reference only, not runtime):
+
+- assets/visual-exploration/cinematic-light/ — Google Stitch Cinematic Light exports
+
+## Website Architecture
+
+The website is a **Next.js/React application** — not a Stitch HTML transplant. See DEC-019 and `website/FOUNDATION.md`.
+
+| Layer | Authority |
+| ----- | --------- |
+| Application (components, tokens, hooks, pages) | `website/src/`, `website/FOUNDATION.md` |
+| Design (layout intent, visual direction) | Stitch/Figma exports, DESIGN.md, design-system-foundation.md |
+
+Rules:
+
+- Implement designs through **components and CSS tokens**, not by copying export HTML or scripts.
+- New or updated designs are **integrated** into the existing architecture for optimal results.
+- Stitch MCP exports update `assets/visual-exploration/` only; merge selectively into the app.
+- Do not blind-run `stitch-to-tsx.py`.
+
 ## Development Rules
 
 - Do not introduce features outside approved MVP scope.

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About | Wild Free Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "primary": "#1d473d",
+                    "bg-subtle": "#F2F4F1",
+                    "on-surface": "#1a1c1b",
+                    "bg-primary": "#F7F8F6",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#abd7c9",
+                    "surface-bright": "#f9f9f7",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#fcc0b5",
+                    "surface-tint": "#3d665b",
+                    "on-secondary-fixed-variant": "#663c28",
+                    "on-error": "#ffffff",
+                    "surface": "#f9f9f7",
+                    "on-primary-fixed-variant": "#254e44",
+                    "primary-fixed-dim": "#a4d0c2",
+                    "text-secondary": "#4B5563",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#ffdad4",
+                    "primary-container": "#365f54",
+                    "on-secondary": "#ffffff",
+                    "accent-info": "#386C8F",
+                    "surface-container-high": "#e8e8e6",
+                    "on-primary-fixed": "#002019",
+                    "secondary-container": "#ffc1a6",
+                    "text-muted": "#6B7280",
+                    "bg-secondary": "#ECEFEB",
+                    "outline": "#717975",
+                    "on-background": "#1a1c1b",
+                    "surface-container-low": "#f3f4f1",
+                    "secondary": "#82533d",
+                    "outline-variant": "#c0c8c4",
+                    "inverse-on-surface": "#f0f1ef",
+                    "on-secondary-fixed": "#321203",
+                    "inverse-primary": "#a4d0c2",
+                    "semantic-success": "#2F7D5C",
+                    "semantic-error": "#B42318",
+                    "tertiary": "#5e352e",
+                    "secondary-fixed": "#ffdbcc",
+                    "text-primary": "#111827",
+                    "on-tertiary-fixed-variant": "#663c34",
+                    "surface-container": "#eeeeec",
+                    "on-secondary-container": "#7a4d38",
+                    "tertiary-fixed-dim": "#f4b8ae",
+                    "surface-dim": "#d9dad8",
+                    "tertiary-container": "#794c44",
+                    "primary-fixed": "#bfecdd",
+                    "secondary-fixed-dim": "#f6b99e",
+                    "error-container": "#ffdad6",
+                    "background": "#f9f9f7",
+                    "inverse-surface": "#2f3130",
+                    "surface-variant": "#e2e3e0",
+                    "bg-surface": "#FFFFFF",
+                    "on-surface-variant": "#414845",
+                    "surface-container-highest": "#e2e3e0",
+                    "semantic-warning": "#A16207",
+                    "on-tertiary-fixed": "#32120c",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "max-content-width": "1200px",
+                    "3xl": "64px",
+                    "2xl": "48px",
+                    "max-reading-width": "760px",
+                    "sm": "8px",
+                    "xl": "32px",
+                    "4xl": "96px",
+                    "md": "16px",
+                    "lg": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Manrope"],
+                    "headline-sm": ["Manrope"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Manrope"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Manrope"],
+                    "headline-sm-mobile": ["Manrope"],
+                    "body-lg": ["Inter"],
+                    "headline-md-mobile": ["Manrope"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-sm": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "headline-lg": ["64px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "headline-sm-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #F7F8F6;
+            color: #1a1c1b;
+            scroll-behavior: smooth;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10" id="top-nav">
+<div class="flex justify-between items-center px-lg md:px-3xl py-md w-full max-w-screen-2xl mx-auto">
+<span class="font-headline-lg text-headline-sm-mobile md:text-headline-sm font-bold text-primary dark:text-primary tracking-tight">Wild Free Gallery</span>
+<div class="hidden md:flex space-x-xl">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Story</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Journey</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Artifacts</a>
+<a class="text-primary dark:text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">About</a>
+</div>
+<a class="hidden md:block bg-primary text-on-primary px-lg py-sm rounded-lg hover:opacity-90 transition-all font-label-md text-label-md" href="#">GitHub</a>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-3xl">
+<section class="relative min-h-[819px] flex items-center overflow-hidden px-lg md:px-3xl">
+<div class="max-w-max-content-width mx-auto grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
+<div class="lg:col-span-7 space-y-lg z-10">
+<div class="inline-flex items-center space-x-sm bg-primary-fixed text-primary px-md py-xs rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-bold">Project Lead</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary tracking-tighter leading-none">
+                        The Architect <br/> of Evidence
+                    </h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-reading-width leading-relaxed">
+                        In a world of decorative distractions, I build digital spaces where clarity and technical discipline reign. Wild Free Gallery is a testament to the power of human-led interaction and intentional craft.
+                    </p>
+<div class="flex flex-wrap gap-md pt-md">
+<button class="bg-primary text-on-primary px-2xl py-md rounded-lg font-label-md text-label-md hover:scale-[1.02] active:scale-95 transition-all">View Repository</button>
+<button class="border border-outline-variant text-primary px-2xl py-md rounded-lg font-label-md text-label-md hover:bg-bg-subtle transition-all">Contact Inquiries</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700">
+<img alt="Portrait of the architect" class="w-full h-full object-cover" data-alt="A cinematic, high-key portrait of a focused professional in a sun-drenched architectural studio during daybreak. The lighting is soft and natural, casting long shadows across a wooden desk filled with technical drawings and a vintage camera. The aesthetic is clean and minimalist with a palette of off-whites, soft sages, and natural wood tones, conveying a mood of calm professional reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcSR286bXh-OvWMS-OjNBkowgjVXpZELkNrqHyoENU4Blr-BYpjzpwUGjAsKJI0tgt4faGTIYayONnnI0S5niAYdxUVAQFQOMgh0e_31QoFdPXmBHzQGcd70eD4336fPf3QQRTg8u6fJijMKNhuPa9lI_1HVLolI9ryxCpzgOJkkGwo5EKLyuH2nzASLtBVWSzsnYLeq2nYNW3CvFhVje7PyQT4Uj8eFaUqNctLwX5RxlPGtT1NgiLCo01mfnWjgAPCSNHGL2_hi42"/>
+</div>
+<div class="absolute -bottom-xl -left-xl bg-surface-container-lowest p-lg rounded-xl shadow-lg max-w-[240px] hidden md:block border border-outline-variant/30">
+<p class="font-label-sm text-label-sm text-secondary font-bold mb-xs">STATUS</p>
+<p class="font-body-md text-body-md text-on-surface">Building in public. Current sprint: Evidence-first UI Framework.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-4xl bg-bg-primary px-lg md:px-3xl">
+<div class="max-w-max-content-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl">
+<div class="reveal-on-scroll bg-surface p-xl rounded-xl border border-outline-variant/30 hover:border-primary/20 transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">architecture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm-mobile md:text-headline-sm text-primary mb-md">Product Leadership</h3>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                            Steering projects with a focus on scalable systems and user-centric architecture. Decisions are driven by data, intuition, and a commitment to long-term value.
+                        </p>
+</div>
+<div class="reveal-on-scroll bg-surface p-xl rounded-xl border border-outline-variant/30 hover:border-primary/20 transition-all group" style="transition-delay: 100ms;">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">code</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm-mobile md:text-headline-sm text-primary mb-md">Technical Discipline</h3>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                            Clean code is not just a preference; it's a moral obligation. Prioritizing performance, accessibility, and maintainability in every line written.
+                        </p>
+</div>
+<div class="reveal-on-scroll bg-surface p-xl rounded-xl border border-outline-variant/30 hover:border-primary/20 transition-all group md:col-span-2 lg:col-span-1" style="transition-delay: 200ms;">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed flex items-center justify-center text-primary mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm-mobile md:text-headline-sm text-primary mb-md">Creative Companion</h3>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                            Balancing the rigid logic of development with the fluid exploration of visual storytelling. Every pixel serves a purpose in the grand narrative.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-4xl px-lg md:px-3xl overflow-hidden">
+<div class="max-w-max-content-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-3xl items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="aspect-square bg-bg-subtle rounded-3xl p-xl flex items-center justify-center">
+<img alt="Meet Bizarro" class="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700" data-alt="A stylized, artistic photograph of a sleek black cat sitting on a minimalist concrete plinth. The environment is a professional design studio with diffuse morning light pouring through large steel-framed windows. The cat, 'Bizarro', has striking green eyes that pop against the monochromatic studio setting. The overall mood is sophisticated, calm, and slightly mysterious, following the project's 'Studio at Daybreak' aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIcJwnpjdHn_RCxicrJKb40uz7pRAZAM4uF4-2zlItUlwF3GyGjgcTjtv6d-wf-QloGhuaiGJ8uD6NjIVag_YLLGODl4DDIAdK91z41PoHqKydA6KzByoLBtmzSXnYTu58edxdd5tApCotuVgxpbBKxAotmT-joNsAwU6vBUlMFiggaDm1HIN1zSTa_zwLLq-ptM8wn-cyhyCUhCk38XQdPS6po9bdyO01rc2pm3ecYbVZB4VybhmoVsSrkrpUUSYiGPqLouD02_c2"/>
+</div>
+<div class="absolute top-md right-md bg-primary text-on-primary px-md py-xs rounded-full text-label-sm font-bold animate-bounce">
+                            Chief Joy Officer
+                        </div>
+</div>
+<div class="order-1 lg:order-2 space-y-lg reveal-on-scroll">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-tight">Meet Bizarro</h2>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                            Every great project needs a muse. Bizarro is the silent observer of late-night refactors and early-morning brainstorms. While I focus on the architecture, Bizarro ensures the studio maintains its soul.
+                        </p>
+<div class="grid grid-cols-2 gap-md">
+<div class="p-md rounded-lg bg-surface-container-low">
+<span class="font-headline-sm text-headline-sm text-primary block">14+</span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Naps per day</span>
+</div>
+<div class="p-md rounded-lg bg-surface-container-low">
+<span class="font-headline-sm text-headline-sm text-primary block">99%</span>
+<span class="font-label-sm text-label-sm text-text-muted uppercase">Approval Rate</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-4xl bg-primary text-on-primary px-lg md:px-3xl">
+<div class="max-w-max-content-width mx-auto">
+<div class="text-center mb-3xl reveal-on-scroll">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md mb-md">Working Principles</h2>
+<div class="h-1 w-24 bg-primary-container mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-2xl">
+<div class="text-center space-y-md reveal-on-scroll">
+<div class="text-4xl opacity-50 font-headline-lg">01</div>
+<h4 class="font-headline-sm text-headline-sm">Clarity</h4>
+<p class="font-body-md opacity-80 leading-relaxed">Reducing noise to amplify signal. If it doesn't serve the user, it doesn't exist.</p>
+</div>
+<div class="text-center space-y-md reveal-on-scroll" style="transition-delay: 100ms;">
+<div class="text-4xl opacity-50 font-headline-lg">02</div>
+<h4 class="font-headline-sm text-headline-sm">Trust</h4>
+<p class="font-body-md opacity-80 leading-relaxed">Building reliable systems that respect privacy and deliver on their promises every time.</p>
+</div>
+<div class="text-center space-y-md reveal-on-scroll" style="transition-delay: 200ms;">
+<div class="text-4xl opacity-50 font-headline-lg">03</div>
+<h4 class="font-headline-sm text-headline-sm">Craft</h4>
+<p class="font-body-md opacity-80 leading-relaxed">The obsession with details that others might miss. Precision in the unseen.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-4xl px-lg md:px-3xl text-center reveal-on-scroll">
+<div class="max-w-max-reading-width mx-auto space-y-xl">
+<h2 class="font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-tight">Let's connect</h2>
+<p class="font-body-lg text-text-secondary leading-relaxed">
+                    Interested in the technical framework or want to discuss a potential collaboration? My inbox is always open for those who value craft.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-lg">
+<a class="flex items-center space-x-sm font-label-md text-label-md text-primary hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span>Inquiries</span>
+</a>
+<a class="flex items-center space-x-sm font-label-md text-label-md text-primary hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">folder</span>
+<span>Repository</span>
+</a>
+<a class="flex items-center space-x-sm font-label-md text-label-md text-primary hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">rss_feed</span>
+<span>Channels</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-lg bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-white/5">
+<div class="flex flex-col items-center justify-center space-y-md px-lg w-full text-center max-w-screen-2xl mx-auto">
+<span class="font-headline-lg text-headline-sm text-on-surface">Wild Free Gallery</span>
+<div class="flex flex-wrap justify-center gap-xl">
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Story</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Journey</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Artifacts</a>
+<a class="text-primary font-bold font-body-md text-body-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md" href="#">Repository</a>
+</div>
+<p class="font-body-md text-body-md text-text-muted mt-lg">© 2024 Wild Free Gallery. Built in public for the modern creative.</p>
+</div>
+</footer>
+<script>
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

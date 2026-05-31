@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Story | Wild Free Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#002019",
+                      "tertiary-container": "#794c44",
+                      "text-primary": "#1A1C1B",
+                      "outline": "#717975",
+                      "surface-container-highest": "#e2e3e0",
+                      "on-secondary-container": "#7a4d38",
+                      "surface-dim": "#d9dad8",
+                      "on-tertiary-fixed": "#32120c",
+                      "on-tertiary-container": "#fcc0b5",
+                      "error": "#ba1a1a",
+                      "on-primary-container": "#abd7c9",
+                      "bg-secondary": "#ECEFEB",
+                      "surface-variant": "#e2e3e0",
+                      "primary-fixed-dim": "#a4d0c2",
+                      "background": "#F9F9F7",
+                      "on-secondary-fixed": "#321203",
+                      "on-surface": "#1a1c1b",
+                      "bg-primary": "#F7F8F6",
+                      "text-muted": "#6B7280",
+                      "semantic-warning": "#A16207",
+                      "secondary": "#82533d",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#5e352e",
+                      "bg-surface": "#FFFFFF",
+                      "inverse-on-surface": "#f0f1ef",
+                      "secondary-fixed": "#ffdbcc",
+                      "semantic-success": "#2F7D5C",
+                      "bg-subtle": "#F2F4F1",
+                      "on-secondary-fixed-variant": "#663c28",
+                      "accent-info": "#386C8F",
+                      "on-tertiary": "#ffffff",
+                      "on-background": "#1a1c1b",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#414845",
+                      "text-secondary": "#4B5563",
+                      "primary-fixed": "#bfecdd",
+                      "surface-container-low": "#f3f4f1",
+                      "primary-container": "#365f54",
+                      "on-primary-fixed-variant": "#254e44",
+                      "tertiary-fixed": "#ffdad4",
+                      "tertiary-fixed-dim": "#f4b8ae",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#ffc1a6",
+                      "secondary-fixed-dim": "#f6b99e",
+                      "semantic-error": "#B42318",
+                      "inverse-primary": "#a4d0c2",
+                      "on-error": "#ffffff",
+                      "on-tertiary-fixed-variant": "#663c34",
+                      "surface-container-high": "#e8e8e6",
+                      "on-error-container": "#93000a",
+                      "primary": "#1d473d",
+                      "inverse-surface": "#2f3130",
+                      "surface-bright": "#f9f9f7",
+                      "error-container": "#ffdad6",
+                      "outline-variant": "#c0c8c4",
+                      "surface-tint": "#3d665b",
+                      "surface-container": "#eeeeec",
+                      "surface": "#f9f9f7",
+                      "daybreak-sage": "#D8E2DC",
+                      "daybreak-white": "#FDFCFB",
+                      "daybreak-grey": "#E5E5E5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "md": "16px",
+                      "sm": "8px",
+                      "3xl": "64px",
+                      "2xl": "48px",
+                      "max-reading-width": "760px",
+                      "lg": "24px",
+                      "xs": "4px",
+                      "4xl": "96px",
+                      "xl": "32px",
+                      "max-content-width": "1200px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Manrope"],
+                      "headline-md": ["Manrope"],
+                      "label-sm": ["Inter"],
+                      "headline-lg": ["Manrope"],
+                      "headline-sm-mobile": ["Manrope"],
+                      "headline-sm": ["Manrope"],
+                      "body-lg": ["Inter"],
+                      "headline-md-mobile": ["Manrope"],
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "headline-lg": ["64px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                      "headline-sm-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "headline-sm": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { background-color: #f9f9f7; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .max-reading { max-width: 760px; margin-left: auto; margin-right: auto; }
+        .bento-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+        .fade-in { animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .editorial-shadow { box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03); }
+    </style>
+</head>
+<body class="text-text-primary bg-daybreak-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 z-50 w-full bg-daybreak-white/80 backdrop-blur-md border-b border-daybreak-grey/30">
+<div class="flex justify-between items-center w-full px-lg py-md max-w-max-content-width mx-auto">
+<a class="font-headline-sm text-headline-sm font-bold text-text-primary" href="#">Wild Free Gallery</a>
+<div class="hidden md:flex items-center gap-xl">
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-text-primary font-bold border-b-2 border-primary transition-colors" href="#">Story</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Journey</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Artifacts</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">About</a>
+</div>
+<a class="px-md py-sm bg-primary text-on-primary text-label-md font-medium rounded-lg hover:opacity-90 transition-opacity" href="https://github.com">GitHub</a>
+</div>
+</nav>
+<main class="pt-3xl">
+<!-- Editorial Hero -->
+<header class="relative w-full overflow-hidden bg-daybreak-white pt-4xl pb-4xl">
+<div class="max-w-max-content-width mx-auto px-lg">
+<div class="max-reading text-center space-y-md fade-in">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-primary font-semibold">The Manifesto</span>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-text-primary tracking-tight leading-[1.1]">The Story Behind the Studio</h1>
+<p class="font-body-lg text-body-lg text-text-secondary max-w-2xl mx-auto leading-relaxed">Wild Free Gallery is not just a digital space; it is an experiment in evidence-first design, blending the raw curiosity of the natural world with the precision of modern technology.</p>
+</div>
+<div class="mt-4xl relative h-[450px] md:h-[700px] rounded-2xl overflow-hidden editorial-shadow">
+<img alt="Evolution of an Idea" class="w-full h-full object-cover transition-transform duration-[2000ms] hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ_dWieVv8w5JTg6JEMo7LTMMn-kVqIpG5DhCThbCqrhwLkvqE22jt46P9oHeYvUqNzb7cGYEU93X8kQvsd808PdgrHqPFjlykcZJJz-IFUKEDnugxaS2ehYKkCVF_Gf5t6jUWjKL2GzAs7UeIlPbqQyd-Q-cLabkXJBVuxll7Cv6QbNr2UzF2dnJRf4CPhtdQ-1Fl8xvKUc1n5N1O8ZZsUjvBQbs2qlFd8frR0dVLGbmlxZAWWDv_Gz8Va6vSLYKonE8Dco6oB-Eq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-daybreak-white/20 to-transparent"></div>
+</div>
+</div>
+</header>
+<!-- Origin Story - Editorial Layout -->
+<section class="py-4xl bg-daybreak-white">
+<div class="max-w-max-content-width mx-auto px-lg grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
+<div class="lg:col-span-7 space-y-xl">
+<h2 class="font-headline-md text-headline-md text-text-primary leading-tight">A Return to Clarity</h2>
+<div class="font-body-lg text-body-lg text-text-secondary space-y-lg leading-relaxed max-w-prose">
+<p>We began with a simple observation: the digital world has become increasingly cluttered with empty claims and decorative noise. Wild Free Gallery was born from the desire to strip away the non-essential, leaving only what is true and functional.</p>
+<p>Our roots are in the belief that design should be a silent partner to content. Whether documenting a journey through the wilderness or building a complex interface, the goal is always discoverability over display.</p>
+</div>
+</div>
+<!-- Large Editorial Pull Quote -->
+<div class="lg:col-span-5 lg:sticky lg:top-32 pt-lg lg:pt-0">
+<blockquote class="relative p-xl bg-daybreak-sage/20 border-l-[6px] border-primary/30 rounded-r-xl">
+<span class="material-symbols-outlined text-5xl text-primary/20 absolute -top-4 -left-2 opacity-50" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="font-headline-sm text-headline-sm-mobile md:text-headline-sm italic text-primary leading-snug">
+                            "The studio is a living document. We inhabit the systems we build."
+                        </p>
+<cite class="block mt-md font-label-md text-label-md not-italic font-bold text-primary uppercase tracking-wider">— Bizarro, Lead Curator</cite>
+</blockquote>
+</div>
+</div>
+</section>
+<!-- Product Philosophy -->
+<section class="py-4xl bg-daybreak-sage/10">
+<div class="max-w-max-content-width mx-auto px-lg">
+<div class="mb-3xl text-center">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-text-secondary mb-sm block">Core Values</span>
+<h2 class="font-headline-md text-headline-md text-text-primary">Product Philosophy</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-xl">
+<div class="p-xl bg-daybreak-white border border-daybreak-grey/40 rounded-2xl hover:shadow-xl transition-all group duration-500">
+<div class="w-14 h-14 bg-daybreak-sage rounded-full flex items-center justify-center mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary scale-110">fact_check</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm-mobile md:text-headline-sm mb-md text-text-primary">Evidence Over Claims</h3>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">We don't sell promises. Every feature is a response to a real-world need, backed by tangible results and iterative testing.</p>
+</div>
+<div class="p-xl bg-daybreak-white border border-daybreak-grey/40 rounded-2xl hover:shadow-xl transition-all group duration-500">
+<div class="w-14 h-14 bg-daybreak-sage rounded-full flex items-center justify-center mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary scale-110">auto_awesome</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm-mobile md:text-headline-sm mb-md text-text-primary">Progressive Disclosure</h3>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">Clarity requires restraint. We provide the essential first, revealing complexity only when the user is ready to engage.</p>
+</div>
+<div class="p-xl bg-daybreak-white border border-daybreak-grey/40 rounded-2xl hover:shadow-xl transition-all group duration-500">
+<div class="w-14 h-14 bg-daybreak-sage rounded-full flex items-center justify-center mb-lg group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary scale-110">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm-mobile md:text-headline-sm mb-md text-text-primary">Human-Led AI</h3>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">Artificial intelligence is our brush, not the artist. We use technology to amplify human creativity, not replace it.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Creative Philosophy -->
+<section class="py-4xl bg-daybreak-white">
+<div class="max-w-max-content-width mx-auto px-lg">
+<div class="bento-grid">
+<div class="col-span-12 md:col-span-8 p-2xl bg-primary text-on-primary rounded-2xl flex flex-col justify-end min-h-[450px] relative overflow-hidden group">
+<img alt="Forest Mist" class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none transition-transform duration-[3000ms] group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgPlcIBlZcLDIqJxAeWXQ0hDQqIZjr-B7bD-NcyRb0zEg7XAg6yAYozBtJ4YEE365u6r2k3fIUK2L3nVtEKhgMIBdQwvM3pbqbi4lwbisajNEPCGVrhfuC-qUOVCZHSgwk8zfypxn_rYqfGw2JUJU8-MbeWgW3BqjH5bVMK0LW-HRpc5S2iaB2Hi4C_zgD9RY384k8zcCguCqdD2tU4m2N9ddvPJzuA8afMFeOVuFrJUNtjnFVaIdTuv5-WykLKaO9ToBiijJJL0fD"/>
+<div class="relative z-10 space-y-md">
+<h3 class="font-headline-md text-headline-md-mobile md:text-headline-md leading-tight">Blending Discipline with Exploration</h3>
+<p class="font-body-lg text-body-lg max-w-lg opacity-90">Creativity thrives within constraints. We balance the rigid structure of systematic design with the fluid, unpredictable nature of artistic discovery.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 p-xl bg-daybreak-sage border border-daybreak-grey text-primary rounded-2xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-5xl opacity-40">compass_calibration</span>
+<div class="space-y-sm">
+<h4 class="font-headline-sm text-headline-sm-mobile md:text-headline-sm text-primary">The Compass</h4>
+<p class="font-body-md text-body-md opacity-80 leading-relaxed">In every project, we ask: does this lead toward clarity or noise? The compass always points toward the former.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vision -->
+<section class="py-4xl bg-daybreak-white">
+<div class="max-reading px-lg text-center space-y-2xl">
+<div class="space-y-lg">
+<h2 class="font-headline-md text-headline-md text-text-primary">The Horizon</h2>
+<p class="font-body-lg text-body-lg text-text-secondary leading-relaxed max-w-2xl mx-auto">We envision a future where human-AI collaboration becomes seamless. Not a world of automated genericism, but one where technology serves as a precision tool for the human spirit.</p>
+</div>
+<div class="pt-xl border-t border-daybreak-grey/50">
+<div class="flex flex-wrap justify-center gap-xl opacity-40">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] font-bold">Resilience</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] font-bold">Truth</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] font-bold">Exploration</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] font-bold">Curation</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-daybreak-white border-t border-daybreak-grey/30">
+<div class="flex flex-col gap-lg w-full px-lg py-2xl max-w-max-content-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-xl">
+<span class="font-headline-sm text-headline-sm font-bold text-text-primary">Wild Free Gallery</span>
+<div class="flex flex-wrap gap-md">
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-text-primary underline decoration-primary underline-offset-4" href="#">Story</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Journey</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">Artifacts</a>
+<a class="font-body-md text-body-md text-text-secondary hover:text-primary transition-colors" href="#">About</a>
+</div>
+</div>
+<div class="border-t border-daybreak-grey/20 pt-lg flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="font-label-sm text-label-sm text-text-secondary">Wild Free Gallery. Build-in-Public. Last Updated: Oct 2023.</p>
+<div class="flex gap-lg">
+<a class="text-text-secondary hover:text-primary transition-colors text-label-sm uppercase tracking-widest font-bold" href="#">Privacy</a>
+<a class="text-text-secondary hover:text-primary transition-colors text-label-sm uppercase tracking-widest font-bold" href="#">Terms</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    entry.target.style.opacity = '1';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .p-xl, .bento-grid > div').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body></html>

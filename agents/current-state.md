@@ -1,6 +1,6 @@
 # agents/current-state.md
 
-Last Updated: 2026-05-30
+Last Updated: 2026-05-31
 
 ## Project
 
@@ -16,26 +16,31 @@ Active
 
 ## Current Phase
 
-Phase 1C — Visual Exploration
+Phase 1D — MVP Build
 
 ## Current Milestone
 
-Visual Exploration & MVP Build Planning
+MVP Implementation
 
 ## Current Objective
 
-Create MVP visual concepts, finalize content structure, and prepare the MVP implementation plan.
+Build, verify, and deploy the MVP web application.
 
 ## Current Deliverables
 
-1. MVP Visual Concepts
-2. MVP Implementation Plan
-3. Content Ownership Model
-4. Analytics Provider Selection
-5. MVP Visual Exploration Review
+1. MVP Web Application (Next.js)
+2. MVP Build Review (Audit #003)
+3. Deployment Configuration
+4. Analytics Integration
 
 ## Recently Completed
 
+- Unified global `Navigation` and `Footer` (single layout on all routes; DEC-020)
+- Shared `Button` / `buttonVariants` with consistent `rounded-lg` CTAs; Tailwind merge fix for `text-on-primary`
+- Tailwind v4 width fix: `--max-width-*` in `@theme`, `max-w-copy-*`; layout tokens `max-w-content-width`, `max-w-reading-width`
+- Repo hygiene: root `.gitignore`, Playwright at `website` root, `website/comparison/README.md`
+- MVP application baseline: five routes, `components/sections/`, motion on Story / About / Journey
+- `website/docs/VISUAL-REVIEW.md`; DEC-019 + `website/FOUNDATION.md` application architecture
 - agents/current-state.md
 - agents/project-context.md
 - agents/decisions.md
@@ -53,33 +58,32 @@ Create MVP visual concepts, finalize content structure, and prepare the MVP impl
 - Audit #002 — Experience & Design Review
 - MVP Visual Exploration v0.1
 - AGENTS.md
+- Cinematic Light visual concepts archived
+- MVP Build started — Next.js + TypeScript + Tailwind + shadcn/ui
+- Audit #003 — MVP Build Review
 
 ## Active Risks
 
-1. Documentation may outpace implementation.
-2. Scope creep from future ecosystem ideas.
-3. Delayed transition from planning to building.
-4. Technical implementation has not yet begun.
-5. Visual exploration may expand beyond MVP implementation needs.
-6. Artifact overload may reduce visitor comprehension.
+1. **Website copy is still placeholder** — metrics, timelines, and artifact rows are illustrative until production content pass (see Audit A-003).
+2. Documentation may outpace implementation.
+3. Scope creep from future ecosystem ideas.
+4. Artifact overload may reduce visitor comprehension.
 
 ## Open Questions
 
 - Analytics provider selection
 - Artifact publishing workflow
 - Audit cadence
-- Detailed MVP implementation sequencing
-- Final visual concept selection
 - Content ownership model
-- Visual token finalization
+- Deployment configuration details
 
 ## Next Actions
 
-1. Review MVP Visual Exploration v0.1
-2. Select preferred visual direction
-3. Freeze MVP visual scope
-4. Finalize content ownership model
-5. Create MVP Implementation Plan
+1. **Baseline sign-off** — eyes-on pass on all five routes (`website/docs/VISUAL-REVIEW.md`); `npm run screenshots` when ready
+2. **Production content** — replace placeholder copy with evidence-backed project facts (required before public launch per A-003)
+3. Deploy to Vercel and verify production build
+4. Analytics provider selection + integration
+5. After baseline agreed — Playwright e2e + a11y checks in CI
 
 ## Conversation Startup Rule
 

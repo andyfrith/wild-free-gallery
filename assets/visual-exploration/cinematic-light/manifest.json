@@ -1,0 +1,15 @@
+{
+  "source": "Google Stitch",
+  "project": "Wild Free Gallery",
+  "projectId": "projects/17461898372358611272",
+  "theme": "Cinematic Light",
+  "exportedAt": "2026-05-31",
+  "workflow": "Export via Stitch MCP (see website/scripts/README.md), then run stitch-to-tsx.py",
+  "screens": {
+    "home": "8bf190ff9f334fc096eafd7bf7cf0bce",
+    "story": "443c1f048f43474a827ac43f7fc9eda3",
+    "journey": "f93470cef19d4d79b5ca411adbdb77e6",
+    "artifacts": "559e1282d2cc4105a103d548379ca905",
+    "about": "53cc18b232a84ac1a3823d5a45ff9728"
+  }
+}

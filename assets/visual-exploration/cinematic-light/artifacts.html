@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Artifacts | Sanctuary of Evidence | Wild Free Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#002019",
+                        "tertiary-container": "#794c44",
+                        "text-primary": "#111827",
+                        "outline": "#717975",
+                        "surface-container-highest": "#e2e3e0",
+                        "on-secondary-container": "#7a4d38",
+                        "surface-dim": "#d9dad8",
+                        "on-tertiary-fixed": "#32120c",
+                        "on-tertiary-container": "#fcc0b5",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#abd7c9",
+                        "bg-secondary": "#ECEFEB",
+                        "surface-variant": "#e2e3e0",
+                        "primary-fixed-dim": "#a4d0c2",
+                        "background": "#fdfdfb",
+                        "on-secondary-fixed": "#321203",
+                        "on-surface": "#1a1c1b",
+                        "bg-primary": "#F7F8F6",
+                        "text-muted": "#6B7280",
+                        "semantic-warning": "#A16207",
+                        "secondary": "#82533d",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#5e352e",
+                        "bg-surface": "#FFFFFF",
+                        "inverse-on-surface": "#f0f1ef",
+                        "secondary-fixed": "#ffdbcc",
+                        "semantic-success": "#2F7D5C",
+                        "bg-subtle": "#F2F4F1",
+                        "on-secondary-fixed-variant": "#663c28",
+                        "accent-info": "#386C8F",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1a1c1b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#414845",
+                        "text-secondary": "#4B5563",
+                        "primary-fixed": "#bfecdd",
+                        "surface-container-low": "#f3f4f1",
+                        "primary-container": "#365f54",
+                        "on-primary-fixed-variant": "#254e44",
+                        "tertiary-fixed": "#ffdad4",
+                        "tertiary-fixed-dim": "#f4b8ae",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#ffc1a6",
+                        "secondary-fixed-dim": "#f6b99e",
+                        "semantic-error": "#B42318",
+                        "inverse-primary": "#a4d0c2",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#663c34",
+                        "surface-container-high": "#e8e8e6",
+                        "on-error-container": "#93000a",
+                        "primary": "#1d473d",
+                        "inverse-surface": "#2f3130",
+                        "surface-bright": "#f9f9f7",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c0c8c4",
+                        "surface-tint": "#3d665b",
+                        "surface-container": "#eeeeec",
+                        "surface": "#f9f9f7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.4rem",
+                        "xl": "0.6rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "sm": "8px",
+                        "3xl": "64px",
+                        "2xl": "48px",
+                        "max-reading-width": "760px",
+                        "lg": "24px",
+                        "xs": "4px",
+                        "4xl": "96px",
+                        "xl": "32px",
+                        "max-content-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "headline-sm": ["Manrope"],
+                        "label-sm": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["64px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-sm": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "300"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            background-color: #fdfdfb;
+            color: #1a1c1b;
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: -0.01em;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2px; /* Precision divider look */
+            background-color: #e2e3e0;
+            border: 1px solid #e2e3e0;
+        }
+        .bento-item {
+            background-color: #fdfdfb;
+        }
+        .editorial-shadow {
+            box-shadow: 0 4px 20px -10px rgba(0, 0, 0, 0.08);
+        }
+        .sanctuary-gradient {
+            background: linear-gradient(180deg, rgba(253,253,251,0) 0%, rgba(247,248,246,1) 100%);
+        }
+        .metadata-label {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #6B7280;
+        }
+        /* Refined table style */
+        .precise-table th {
+            font-weight: 500;
+            border-bottom: 1px solid #eeeeec;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .precise-table td {
+            border-bottom: 1px solid #f3f4f1;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-surface-container">
+<nav class="flex justify-between items-center w-full px-lg py-md max-w-max-content-width mx-auto">
+<div class="font-headline-sm text-[22px] tracking-tight font-bold text-text-primary">Wild Free Gallery</div>
+<div class="hidden md:flex items-center gap-xl">
+<a class="text-text-secondary text-label-md hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-text-secondary text-label-md hover:text-primary transition-colors" href="#">Story</a>
+<a class="text-text-secondary text-label-md hover:text-primary transition-colors" href="#">Journey</a>
+<a class="text-text-primary text-label-md font-bold relative after:content-[''] after:absolute after:-bottom-5 after:left-0 after:w-full after:h-0.5 after:bg-primary" href="#">Artifacts</a>
+<a class="text-text-secondary text-label-md hover:text-primary transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-md">
+<button class="px-md py-sm border border-outline-variant text-text-primary rounded text-label-md font-medium hover:bg-surface-container transition-colors">GitHub Access</button>
+</div>
+</nav>
+</header>
+<main class="max-w-max-content-width mx-auto">
+<!-- Hero: Cinematic Sanctuary Header -->
+<section class="relative pt-3xl pb-4xl px-lg grid lg:grid-cols-2 gap-2xl items-center">
+<div class="max-w-xl">
+<div class="flex items-center gap-sm mb-lg">
+<span class="w-8 h-[1px] bg-primary"></span>
+<span class="metadata-label">Index 04 / Sanctuary of Evidence</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg mb-lg tracking-tight leading-[1.05]">Evidence Repository</h1>
+<p class="font-body-lg text-body-lg text-text-secondary mb-2xl max-w-md">
+                A disciplined archive of strategy, execution, and architectural truth. Every artifact here represents a moment of verified discovery.
+            </p>
+<div class="flex gap-md">
+<button class="px-xl py-md bg-primary text-on-primary rounded font-bold hover:bg-opacity-90 transition-all flex items-center gap-sm">
+                    Enter Archive <span class="material-symbols-outlined text-md">database</span>
+</button>
+<button class="px-xl py-md border border-outline-variant text-text-primary rounded font-bold hover:bg-surface-container transition-all">
+                    System Audit
+                </button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-xl blur-2xl group-hover:bg-primary/10 transition-all"></div>
+<img alt="Sanctuary of Evidence" class="relative rounded-lg shadow-2xl w-full aspect-[4/3] object-cover editorial-shadow grayscale-[0.2] sepia-[0.1]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2d172Z8EJfQY6tmdEG5hiR66m3bTcT2AQr-pDpt5ucsF5LYOrjSEDn2LMk1BbbtHWj_4JIhPTppceVAYYJ7HVuEYTpfxXZ46i_MIg1cGD4D50PLtVxCirQ0ujf4tWwrlo_1pnsOUttKrEWQrkplfvF7HXKVEx4nttn0C0CSgiJKhlefM0VoKBqczzco7_NvN6s1NJa1MoqmOk9QZD2EP_7nJZszuufCQ3eh9bc9Il3eJq325IMTfLbfvLQ2d5gCLeiGoUMN07EJmL"/>
+<div class="absolute bottom-4 right-4 bg-white/90 backdrop-blur px-md py-sm rounded border border-white/20 text-[10px] font-mono text-text-muted uppercase tracking-widest">
+                Ref: ARCHIVE_01_VISUAL
+            </div>
+</div>
+</section>
+<!-- Priority Assets: Disciplined Grid -->
+<section class="mb-4xl px-lg">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<span class="metadata-label mb-xs block">Classification: Tier 1</span>
+<h2 class="font-headline-sm text-headline-sm tracking-tight">Strategic Blueprints</h2>
+</div>
+<a class="text-label-md text-primary font-bold hover:underline flex items-center gap-xs" href="#">
+                View All Assets <span class="material-symbols-outlined">north_east</span>
+</a>
+</div>
+<div class="bento-grid rounded-lg overflow-hidden editorial-shadow">
+<!-- Main Featured Artifact -->
+<div class="col-span-12 lg:col-span-8 bento-item p-xl lg:p-3xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-lg">
+<span class="px-sm py-1 bg-primary text-on-primary text-[10px] font-bold rounded uppercase tracking-widest">Primary Document</span>
+</div>
+<div class="max-w-lg">
+<span class="material-symbols-outlined text-4xl text-primary mb-xl" style="font-variation-settings: 'wght' 200;">architecture</span>
+<h3 class="font-headline-md text-headline-md mb-md leading-tight">Ecosystem Strategic Blueprint 2024</h3>
+<p class="text-body-md text-text-secondary mb-2xl">
+                        The definitive document outlining the architectural evolution of decoupled gallery experiences and the transition to decentralized content ownership.
+                    </p>
+<div class="flex items-center gap-xl border-t border-surface-container pt-xl">
+<div>
+<p class="metadata-label mb-1">Status</p>
+<p class="text-sm font-medium text-semantic-success flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-semantic-success"></span> Active Protocol
+                            </p>
+</div>
+<div>
+<p class="metadata-label mb-1">Version</p>
+<p class="text-sm font-medium">v4.2.1-Final</p>
+</div>
+<button class="ml-auto bg-surface-container-high px-md py-sm rounded hover:bg-primary hover:text-white transition-all text-sm font-bold flex items-center gap-2">
+                            Open Reader <span class="material-symbols-outlined text-md">menu_book</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Secondary Category Cards -->
+<div class="col-span-12 lg:col-span-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-px bg-surface-container">
+<div class="bento-item p-xl hover:bg-bg-primary transition-colors cursor-pointer flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-md">
+<span class="material-symbols-outlined text-secondary">token</span>
+<span class="text-[10px] font-mono text-text-muted">CAT_DS_01</span>
+</div>
+<h4 class="font-bold text-text-primary mb-1">Design Systems</h4>
+<p class="text-label-sm text-text-muted leading-relaxed">Comprehensive component libraries and semantic token schemas.</p>
+</div>
+<div class="pt-md mt-md border-t border-surface-container-low flex justify-between items-center">
+<span class="text-[10px] font-bold text-primary">12 ARTIFACTS</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<div class="bento-item p-xl hover:bg-bg-primary transition-colors cursor-pointer flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-md">
+<span class="material-symbols-outlined text-accent-info">memory</span>
+<span class="text-[10px] font-mono text-text-muted">CAT_AI_04</span>
+</div>
+<h4 class="font-bold text-text-primary mb-1">AI Architecture</h4>
+<p class="text-label-sm text-text-muted leading-relaxed">Neural weights, prompt engineering logic, and ethical frameworks.</p>
+</div>
+<div class="pt-md mt-md border-t border-surface-container-low flex justify-between items-center">
+<span class="text-[10px] font-bold text-primary">8 ARTIFACTS</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Audit Repository: Refined precision table -->
+<section class="mb-4xl px-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-xl border-b border-surface-container pb-md">
+<div>
+<span class="metadata-label mb-xs block">Verification Log</span>
+<h2 class="font-headline-sm text-headline-sm tracking-tight">Audit Repository</h2>
+</div>
+<div class="flex gap-sm mt-md md:mt-0">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-text-muted text-md">search</span>
+<input class="bg-surface-container-low border-none rounded text-sm pl-10 pr-md py-2.5 focus:ring-1 focus:ring-primary w-64" placeholder="Filter by ID or title..." type="text"/>
+</div>
+<button class="bg-surface-container-low px-md rounded flex items-center gap-2 text-sm font-medium hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-md">tune</span> Filter
+                </button>
+</div>
+</div>
+<div class="bg-bg-surface rounded-lg border border-surface-container overflow-hidden editorial-shadow">
+<table class="w-full text-left precise-table">
+<thead class="bg-surface-container-low text-[10px] text-text-muted uppercase tracking-widest">
+<tr>
+<th class="px-xl py-md font-bold">Ref ID</th>
+<th class="px-xl py-md font-bold">Document Title</th>
+<th class="px-xl py-md font-bold">Classification</th>
+<th class="px-xl py-md font-bold">Last Verification</th>
+<th class="px-xl py-md font-bold text-right">Integrity</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<tr class="hover:bg-bg-primary transition-all cursor-pointer group">
+<td class="px-xl py-lg text-[11px] font-mono text-text-muted">AUD-2023-092</td>
+<td class="px-xl py-lg">
+<div class="font-bold text-text-primary group-hover:text-primary transition-colors">Mobile Experience Audit v2.1</div>
+<div class="text-[10px] text-text-muted mt-0.5">Author: Wild Free Research Lab</div>
+</td>
+<td class="px-xl py-lg"><span class="border border-outline-variant px-2 py-0.5 rounded text-[10px] font-medium text-text-secondary">UX_ANALYTICS</span></td>
+<td class="px-xl py-lg text-sm text-text-secondary">Oct 12, 2023</td>
+<td class="px-xl py-lg text-right">
+<span class="text-semantic-success text-[11px] font-bold flex items-center justify-end gap-1.5">
+<span class="material-symbols-outlined text-sm">verified</span> VERIFIED
+                            </span>
+</td>
+</tr>
+<tr class="hover:bg-bg-primary transition-all cursor-pointer group">
+<td class="px-xl py-lg text-[11px] font-mono text-text-muted">SEC-2023-044</td>
+<td class="px-xl py-lg">
+<div class="font-bold text-text-primary group-hover:text-primary transition-colors">API Layer Security Protocol</div>
+<div class="text-[10px] text-text-muted mt-0.5">Author: Core Infrastructure Team</div>
+</td>
+<td class="px-xl py-lg"><span class="border border-outline-variant px-2 py-0.5 rounded text-[10px] font-medium text-text-secondary">SECURITY</span></td>
+<td class="px-xl py-lg text-sm text-text-secondary">Sep 28, 2023</td>
+<td class="px-xl py-lg text-right">
+<span class="text-semantic-success text-[11px] font-bold flex items-center justify-end gap-1.5">
+<span class="material-symbols-outlined text-sm">verified</span> VERIFIED
+                            </span>
+</td>
+</tr>
+<tr class="hover:bg-bg-primary transition-all cursor-pointer group">
+<td class="px-xl py-lg text-[11px] font-mono text-text-muted">SYS-2023-012</td>
+<td class="px-xl py-lg">
+<div class="font-bold text-text-primary group-hover:text-primary transition-colors">Neural Image Generation Weights</div>
+<div class="text-[10px] text-text-muted mt-0.5">Author: AI Ethics Board</div>
+</td>
+<td class="px-xl py-lg"><span class="border border-outline-variant px-2 py-0.5 rounded text-[10px] font-medium text-text-secondary">AI_SYSTEMS</span></td>
+<td class="px-xl py-lg text-sm text-text-secondary">Aug 15, 2023</td>
+<td class="px-xl py-lg text-right">
+<span class="text-semantic-warning text-[11px] font-bold flex items-center justify-end gap-1.5">
+<span class="material-symbols-outlined text-sm">hourglass_empty</span> PENDING_REVIEW
+                            </span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="p-md bg-surface-container-low text-center">
+<button class="text-label-sm font-bold text-primary hover:underline">Load Full Archive History (142 Records)</button>
+</div>
+</div>
+</section>
+<!-- Governance & Source -->
+<div class="grid md:grid-cols-2 gap-xl px-lg mb-4xl">
+<div class="bg-primary p-xl lg:p-2xl rounded-lg text-on-primary editorial-shadow relative overflow-hidden">
+<div class="absolute top-0 right-0 p-lg opacity-10">
+<span class="material-symbols-outlined text-9xl">gavel</span>
+</div>
+<div class="relative z-10">
+<span class="metadata-label text-primary-fixed mb-md block">Governance Protocol</span>
+<h3 class="font-headline-sm text-headline-sm mb-lg">Transparency Commitments</h3>
+<p class="text-body-md opacity-80 mb-2xl leading-relaxed">
+                    Our Sanctuary of Evidence operates under a strict Build-in-Public framework. All design decisions, code commits, and AI training parameters are available for public scrutiny.
+                </p>
+<div class="grid grid-cols-2 gap-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">public</span>
+<span class="text-[11px] font-bold uppercase tracking-wider">Open Process</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-fixed">verified_user</span>
+<span class="text-[11px] font-bold uppercase tracking-wider">Bias Mitigation</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-xl lg:p-2xl rounded-lg border border-surface-container editorial-shadow flex flex-col justify-between">
+<div>
+<span class="metadata-label mb-md block">Logic &amp; Source</span>
+<h3 class="font-headline-sm text-headline-sm mb-lg">Technical Source</h3>
+<p class="text-text-secondary text-body-md mb-2xl">
+                    Direct access to the underlying logic, schemas, and automation scripts powering the Wild Free infrastructure.
+                </p>
+</div>
+<div class="flex items-center gap-lg">
+<a class="flex items-center gap-2 px-xl py-md bg-white border border-outline-variant rounded font-bold text-sm hover:bg-surface-container transition-all" href="#">
+                    Source Repositories <span class="material-symbols-outlined text-md">link</span>
+</a>
+<a class="text-sm font-bold text-text-muted hover:text-text-primary flex items-center gap-1" href="#">
+                    Documentation <span class="material-symbols-outlined text-md">description</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container w-full border-t border-outline-variant">
+<div class="flex flex-col gap-lg w-full px-lg py-2xl max-w-max-content-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between gap-xl">
+<div class="max-w-sm">
+<div class="font-headline-sm text-headline-sm tracking-tight font-bold text-text-primary mb-md">Wild Free Gallery</div>
+<p class="text-text-secondary text-body-md leading-relaxed">
+                    An evidence-first digital laboratory exploring the intersection of human art and machine engineering through radical transparency.
+                </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-xl">
+<div class="flex flex-col gap-sm">
+<span class="metadata-label mb-2">Navigation</span>
+<a class="text-text-secondary text-sm hover:text-text-primary transition-colors" href="#">Home Archive</a>
+<a class="text-text-secondary text-sm hover:text-text-primary transition-colors" href="#">The Narrative</a>
+<a class="text-text-secondary text-sm hover:text-text-primary transition-colors" href="#">Design Logs</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="metadata-label mb-2">Legal/Protocols</span>
+<a class="text-text-secondary text-sm hover:text-text-primary transition-colors" href="#">Ethics Policy</a>
+<a class="text-text-secondary text-sm hover:text-text-primary transition-colors" href="#">Governance</a>
+<a class="text-text-secondary text-sm hover:text-text-primary transition-colors" href="#">License Details</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="metadata-label mb-2">Connect</span>
+<a class="text-text-secondary text-sm hover:text-text-primary transition-colors" href="#">GitHub Repo</a>
+<a class="text-text-secondary text-sm hover:text-text-primary transition-colors" href="#">Substack Feed</a>
+<a class="text-text-secondary text-sm hover:text-text-primary transition-colors" href="#">X / Twitter</a>
+</div>
+</div>
+</div>
+<div class="pt-xl border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-md">
+<span class="text-[10px] font-mono text-text-muted uppercase tracking-widest">Sanctuary V1.04 // Status: Online</span>
+<span class="text-[10px] font-mono text-text-muted uppercase tracking-widest">© 2023 WILD FREE LABS. ALL RIGHTS RESERVED.</span>
+</div>
+</div>
+</footer>
+<script>
+    // Refined search filtering
+    const searchInput = document.querySelector('input[placeholder="Filter by ID or title..."]');
+    const rows = document.querySelectorAll('tbody tr');
+
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            rows.forEach(row => {
+                const title = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+                const id = row.querySelector('td:nth-child(1)').textContent.toLowerCase();
+                if (title.includes(term) || id.includes(term)) {
+                    row.style.display = 'table-row';
+                    row.style.opacity = '1';
+                } else {
+                    row.style.display = 'none';
+                    row.style.opacity = '0';
+                }
+            });
+        });
+    }
+
+    // Subtle atmospheric effect for the featured artifact
+    const bentoItems = document.querySelectorAll('.bento-item');
+    bentoItems.forEach(item => {
+        item.addEventListener('mousemove', (e) => {
+            const rect = item.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            item.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(29, 71, 61, 0.02) 0%, rgba(253, 253, 251, 1) 80%)`;
+        });
+        item.addEventListener('mouseleave', () => {
+            item.style.background = '#fdfdfb';
+        });
+    });
+</script>
+</body></html>

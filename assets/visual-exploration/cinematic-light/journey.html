@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Journey | Wild Free Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002019",
+                    "tertiary-container": "#794c44",
+                    "text-primary": "#111827",
+                    "outline": "#717975",
+                    "surface-container-highest": "#e2e3e0",
+                    "on-secondary-container": "#7a4d38",
+                    "surface-dim": "#d9dad8",
+                    "on-tertiary-fixed": "#32120c",
+                    "on-tertiary-container": "#fcc0b5",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#abd7c9",
+                    "bg-secondary": "#ECEFEB",
+                    "surface-variant": "#e2e3e0",
+                    "primary-fixed-dim": "#a4d0c2",
+                    "background": "#fdfcfb", /* Daybreak: Warmer neutral */
+                    "on-secondary-fixed": "#321203",
+                    "on-surface": "#1a1c1b",
+                    "bg-primary": "#F7F8F6",
+                    "text-muted": "#6B7280",
+                    "semantic-warning": "#A16207",
+                    "secondary": "#82533d",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#5e352e",
+                    "bg-surface": "#FFFFFF",
+                    "inverse-on-surface": "#f0f1ef",
+                    "secondary-fixed": "#ffdbcc",
+                    "semantic-success": "#2F7D5C",
+                    "bg-subtle": "#f2f3ef", /* Daybreak: Soft sage touch */
+                    "on-secondary-fixed-variant": "#663c28",
+                    "accent-info": "#386C8F",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1a1c1b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#414845",
+                    "text-secondary": "#4B5563",
+                    "primary-fixed": "#bfecdd",
+                    "surface-container-low": "#f6f7f3",
+                    "primary-container": "#1d473d",
+                    "on-primary-fixed-variant": "#254e44",
+                    "tertiary-fixed": "#ffdad4",
+                    "tertiary-fixed-dim": "#f4b8ae",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#ffc1a6",
+                    "secondary-fixed-dim": "#f6b99e",
+                    "semantic-error": "#B42318",
+                    "inverse-primary": "#a4d0c2",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#663c34",
+                    "surface-container-high": "#e8e8e6",
+                    "on-error-container": "#93000a",
+                    "primary": "#2d5a4e", /* Adjusted Sage */
+                    "inverse-surface": "#2f3130",
+                    "surface-bright": "#fdfcfb",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#d8ddd3", /* Softer border */
+                    "surface-tint": "#3d665b",
+                    "surface-container": "#f0f1eb",
+                    "surface": "#fdfcfb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "16px",
+                    "sm": "8px",
+                    "3xl": "64px",
+                    "2xl": "48px",
+                    "max-reading-width": "760px",
+                    "lg": "24px",
+                    "xs": "4px",
+                    "4xl": "96px",
+                    "xl": "32px",
+                    "max-content-width": "1200px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "headline-sm": ["Manrope"],
+                    "label-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["64px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-sm": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glow-subtle {
+            box-shadow: 0 0 20px -5px rgba(45, 90, 78, 0.08);
+            border: 1px solid rgba(45, 90, 78, 0.1);
+        }
+        .cinematic-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+        .instrument-border {
+            border-left: 3px solid #1d473d;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<nav class="fixed top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-lg py-md max-w-content-width mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold text-text-primary tracking-tight">Wild Free Gallery</div>
+<div class="hidden md:flex gap-xl items-center">
+<a class="text-text-secondary hover:text-primary transition-colors font-label-md" href="#">Home</a>
+<a class="text-text-secondary hover:text-primary transition-colors font-label-md" href="#">Story</a>
+<a class="text-text-primary font-bold border-b-2 border-primary py-1 font-label-md" href="#">Journey</a>
+<a class="text-text-secondary hover:text-primary transition-colors font-label-md" href="#">Artifacts</a>
+<a class="text-text-secondary hover:text-primary transition-colors font-label-md" href="#">About</a>
+<a class="bg-primary text-white px-lg py-sm rounded-full font-label-md hover:opacity-90 transition-opacity" href="#">Source Code</a>
+</div>
+<button class="md:hidden p-sm">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-4xl px-md max-w-content-width mx-auto">
+<!-- Hero Section -->
+<section class="mb-4xl">
+<div class="max-w-reading-width">
+<span class="inline-block px-md py-xs bg-primary/10 text-primary border border-primary/20 rounded-full font-label-sm mb-md tracking-widest uppercase">Chronicle v1.4</span>
+<h1 class="font-headline-lg text-headline-lg mb-lg text-text-primary leading-[1.05]">The Evolution of <br/><span class="text-primary italic">an Idea.</span></h1>
+<p class="font-body-lg text-body-lg text-text-secondary leading-relaxed">A documentation of strategic pivots, technical audits, and foundational shifts that shaped the Wild Free Gallery into a living museum.</p>
+</div>
+</section>
+<!-- Progress Dashboard: Precision Instrument Style -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-sm mb-4xl">
+<div class="bg-white p-lg border border-outline-variant instrument-border">
+<span class="text-text-muted font-label-sm uppercase tracking-tighter">Completion</span>
+<div class="flex items-baseline gap-xs mt-xs">
+<span class="text-3xl font-bold text-text-primary tabular-nums">84</span>
+<span class="text-lg font-medium text-text-secondary">%</span>
+<span class="ml-auto text-semantic-success font-label-sm flex items-center"><span class="material-symbols-outlined text-[14px]">add</span>12%</span>
+</div>
+<div class="w-full bg-surface-container h-1 mt-md">
+<div class="bg-primary h-full w-[84%]"></div>
+</div>
+</div>
+<div class="bg-white p-lg border border-outline-variant instrument-border">
+<span class="text-text-muted font-label-sm uppercase tracking-tighter">Stability</span>
+<div class="flex items-baseline gap-xs mt-xs">
+<span class="text-3xl font-bold text-text-primary tabular-nums">99.2</span>
+<span class="text-lg font-medium text-text-secondary">%</span>
+</div>
+<div class="flex gap-0.5 mt-md">
+<div class="flex-1 h-3 bg-primary"></div>
+<div class="flex-1 h-3 bg-primary"></div>
+<div class="flex-1 h-3 bg-primary"></div>
+<div class="flex-1 h-3 bg-outline-variant"></div>
+</div>
+</div>
+<div class="bg-white p-lg border border-outline-variant instrument-border">
+<span class="text-text-muted font-label-sm uppercase tracking-tighter">Artifacts</span>
+<div class="flex items-baseline gap-xs mt-xs">
+<span class="text-3xl font-bold text-text-primary tabular-nums">2,410</span>
+</div>
+<div class="mt-md flex gap-1">
+<div class="w-4 h-4 rounded-full bg-primary/20"></div>
+<div class="w-4 h-4 rounded-full bg-primary/40"></div>
+<div class="w-4 h-4 rounded-full bg-primary/60"></div>
+</div>
+</div>
+<div class="bg-white p-lg border border-outline-variant instrument-border">
+<span class="text-text-muted font-label-sm uppercase tracking-tighter">Velocity</span>
+<div class="flex items-baseline gap-xs mt-xs">
+<span class="text-3xl font-bold text-text-primary">HIGH</span>
+</div>
+<div class="mt-md flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-semantic-success animate-pulse"></div>
+<span class="font-label-sm text-text-secondary uppercase">Nominal</span>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-3xl">
+<!-- Project Timeline: Atmospheric Lighting -->
+<div class="lg:col-span-7">
+<div class="flex items-center gap-md mb-2xl">
+<div class="w-8 h-px bg-primary"></div>
+<h2 class="font-label-md uppercase tracking-[0.2em] font-bold text-primary">Timeline</h2>
+</div>
+<div class="relative pl-lg border-l border-outline-variant/50 space-y-3xl">
+<!-- Timeline Item 1 -->
+<div class="relative group">
+<div class="absolute -left-[29px] top-0 w-3 h-3 rounded-full bg-primary ring-4 ring-background"></div>
+<div class="glow-subtle p-xl rounded-xl bg-white/50 backdrop-blur-sm hover:bg-white transition-all duration-500">
+<div class="mb-sm flex items-center justify-between">
+<span class="font-label-sm text-primary font-bold tracking-widest uppercase">Oct 2023</span>
+<span class="font-label-sm text-text-muted italic">Inauguration</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-md">The Foundation Protocol</h3>
+<p class="font-body-md text-text-secondary mb-lg leading-relaxed">Establishment of the core evidence-first philosophy. Defined the visual language and architectural constraints for the digital museum.</p>
+<div class="border-t border-outline-variant pt-md">
+<p class="font-label-md text-text-primary italic"><span class="font-bold uppercase text-[10px] mr-2 not-italic text-primary">Outcome:</span> "A validated design system and 12-column grid hierarchy."</p>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative group">
+<div class="absolute -left-[29px] top-0 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-background"></div>
+<div class="glow-subtle p-xl rounded-xl bg-white/30 backdrop-blur-sm hover:bg-white transition-all duration-500">
+<div class="mb-sm flex items-center justify-between">
+<span class="font-label-sm text-text-muted font-bold tracking-widest uppercase">Aug 2023</span>
+<span class="font-label-sm text-text-muted italic">Infrastructure</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-md">Schema Deployment</h3>
+<p class="font-body-md text-text-secondary mb-lg">The migration from local storage to a global, semantic data architecture. Automated artifact tagging was introduced.</p>
+<div class="flex gap-sm">
+<span class="bg-primary/5 text-primary border border-primary/10 px-3 py-1 rounded-full font-label-sm">Cloud Scale</span>
+<span class="bg-primary/5 text-primary border border-primary/10 px-3 py-1 rounded-full font-label-sm">Auto-Tagging</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative group">
+<div class="absolute -left-[29px] top-0 w-3 h-3 rounded-full bg-outline-variant ring-4 ring-background"></div>
+<div class="glow-subtle p-xl rounded-xl bg-white/30 backdrop-blur-sm hover:bg-white transition-all duration-500">
+<div class="mb-sm flex items-center justify-between">
+<span class="font-label-sm text-text-muted font-bold tracking-widest uppercase">Jun 2023</span>
+<span class="font-label-sm text-text-muted italic">Concept</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-text-primary mb-md">The Vision Sprint</h3>
+<p class="font-body-md text-text-secondary">The initial spark. Mapping out the 404 artifact concept and user journey flows for the digital gallery experience.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Dashboard Elements -->
+<div class="lg:col-span-5 flex flex-col gap-2xl">
+<!-- Strategic Pivots -->
+<section>
+<div class="flex items-center gap-md mb-xl">
+<div class="w-6 h-px bg-secondary"></div>
+<h2 class="font-label-md uppercase tracking-[0.2em] font-bold text-secondary">Strategic Pivots</h2>
+</div>
+<div class="space-y-md">
+<div class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-label-md font-bold text-text-primary mb-xs flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-primary rounded-full"></span>
+                            Canvas Centricity
+                        </h4>
+<p class="font-label-md text-text-secondary leading-relaxed">Transition from traditional navigation to a content-first 'Canvas' model for reduced cognitive load.</p>
+</div>
+<div class="bg-white p-lg rounded-xl border border-outline-variant shadow-sm hover:shadow-md transition-shadow">
+<h4 class="font-label-md font-bold text-text-primary mb-xs flex items-center gap-2">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full"></span>
+                            Tonal Layer Shift
+                        </h4>
+<p class="font-label-md text-text-secondary leading-relaxed">Abandoning heavy drop shadows for tonal elevation, aligning with a high-end minimalist aesthetic.</p>
+</div>
+</div>
+</section>
+<!-- Audit Reviews: Glowing Borders -->
+<section>
+<div class="flex items-center gap-md mb-xl">
+<div class="w-6 h-px bg-primary"></div>
+<h2 class="font-label-md uppercase tracking-[0.2em] font-bold text-primary">Audit Summaries</h2>
+</div>
+<div class="space-y-md">
+<div class="glow-subtle bg-white rounded-xl overflow-hidden">
+<div class="p-lg border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+<span class="font-label-sm font-bold text-text-primary uppercase tracking-[0.1em]">Foundation Review</span>
+<span class="bg-semantic-success/10 text-semantic-success text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-wider">Passed</span>
+</div>
+<div class="p-lg space-y-sm">
+<div class="flex justify-between font-label-md">
+<span class="text-text-secondary">Accessibility</span>
+<span class="font-bold text-text-primary">AA Ready</span>
+</div>
+<div class="flex justify-between font-label-md">
+<span class="text-text-secondary">Code Integrity</span>
+<span class="font-bold text-text-primary">98% Clean</span>
+</div>
+</div>
+</div>
+<div class="glow-subtle bg-white rounded-xl overflow-hidden border-primary/20">
+<div class="p-lg border-b border-outline-variant flex justify-between items-center bg-surface-container-low">
+<span class="font-label-sm font-bold text-text-primary uppercase tracking-[0.1em]">Experience Audit</span>
+<span class="bg-semantic-warning/10 text-semantic-warning text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-wider">Optimizing</span>
+</div>
+<div class="p-lg space-y-sm">
+<div class="flex justify-between font-label-md">
+<span class="text-text-secondary">Motion Perf</span>
+<span class="font-bold text-text-primary italic">Evaluating</span>
+</div>
+<div class="flex justify-between font-label-md">
+<span class="text-text-secondary">Engagement</span>
+<span class="font-bold text-primary">High Velocity</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Learnings -->
+<section>
+<div class="bg-primary p-xl rounded-2xl relative overflow-hidden text-white shadow-xl">
+<div class="relative z-10">
+<span class="material-symbols-outlined mb-md text-primary-fixed opacity-50">lightbulb</span>
+<p class="font-body-md italic mb-lg leading-relaxed text-primary-fixed">"The most profound discovery was that silence in UI is as powerful as signal. By stripping away decorative elements, we didn't just simplify; we amplified the artifact's story."</p>
+<div class="flex items-center gap-sm">
+<div class="h-px w-8 bg-primary-fixed opacity-30"></div>
+<span class="font-label-sm uppercase tracking-widest opacity-70">Lead Curator</span>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-5">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Momentum Banner: Cinematic Treatment -->
+<section class="mt-4xl w-full h-[500px] rounded-[32px] overflow-hidden relative group shadow-2xl">
+<img alt="Evolution and momentum" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnoUylcyL1S0SD8iN1i7RdQG8inpg7IRl8Fhf2DcBGJM1y6aoGwNxaXKdfPnjIDdECn97l-mMOxE6uo0tuKlrAUf4WwokmELZvXTAFrkLlQdGhN7Nogg5FiK-XX7VupbMA_puRYmM7HC8SZXrriD5lSsiTRJb0fMYfGUoc4WeM24wE8qb8RlIwSVvpgosOmJbFPznI9pW-Cnty9nSvDEcjDfGpdSaZU446jvAux99AfaohuifQ4KUtl8ZOSIAmCFKkFiN7hIaX1Zbr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-2xl">
+<div class="max-w-xl">
+<span class="text-white/60 font-label-sm uppercase tracking-widest mb-xs block">Project Epilogue</span>
+<h2 class="font-headline-md text-white mb-md">Continuous Discovery</h2>
+<p class="text-white/70 font-body-md leading-relaxed">Our journey is a state of perpetual refinement. We uncover new artifacts and update our narratives daily, ensuring the gallery remains a living, breathing archive of human expression.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container mt-4xl border-t border-outline-variant">
+<div class="flex flex-col gap-lg w-full px-lg py-3xl max-w-content-width mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-xl">
+<div class="font-headline-sm text-headline-sm font-bold text-text-primary tracking-tighter">Wild Free Gallery</div>
+<div class="flex flex-wrap gap-xl">
+<a class="text-text-secondary hover:text-primary transition-colors font-label-md" href="#">Home</a>
+<a class="text-text-secondary hover:text-primary transition-colors font-label-md" href="#">Story</a>
+<a class="text-text-primary font-bold font-label-md" href="#">Journey</a>
+<a class="text-text-secondary hover:text-primary transition-colors font-label-md" href="#">Artifacts</a>
+<a class="text-text-secondary hover:text-primary transition-colors font-label-md" href="#">GitHub</a>
+</div>
+</div>
+<div class="h-px bg-outline-variant/30 w-full"></div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="font-label-sm text-text-muted">© 2023 Wild Free Gallery. Build-in-Public Documentation.</p>
+<div class="flex gap-lg">
+<span class="material-symbols-outlined text-text-muted hover:text-primary cursor-pointer transition-colors text-[20px]">public</span>
+<span class="material-symbols-outlined text-text-muted hover:text-primary cursor-pointer transition-colors text-[20px]">history_edu</span>
+<span class="material-symbols-outlined text-text-muted hover:text-primary cursor-pointer transition-colors text-[20px]">terminal</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.relative.group').forEach(el => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(20px)";
+        el.style.transition = "all 0.8s cubic-bezier(0.16, 1, 0.3, 1)";
+        observer.observe(el);
+    });
+</script>
+</body></html>
