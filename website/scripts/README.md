@@ -57,6 +57,24 @@ cd website && npm run build
 
 **Do not** commit generator output without manual integration — it drops Navigation, Footer, page themes, tokens, and React patterns.
 
+## Website content validation
+
+Website copy is curated in `website/src/lib/*-content.ts`. When docs or project status change, update content modules and validate:
+
+```bash
+cd website && npm run content:check
+```
+
+### Files
+
+| File | Purpose |
+| ---- | ------- |
+| `scripts/check-content.mjs` | Drift detection (links, counts, audits, phase) |
+| `scripts/content-manifest.json` | Published artifact list and operational snapshot expectations |
+| `.cursor/skills/sync-website-content/SKILL.md` | Agent workflow and content file mapping |
+
+The check script reports errors and warnings; it does not rewrite content. See [FOUNDATION.md](../FOUNDATION.md#content-stewardship).
+
 ## MCP tools reference
 
 | Tool | Purpose |

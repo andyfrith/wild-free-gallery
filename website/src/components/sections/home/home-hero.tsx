@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { StudioImage } from "@/components/ui/studio-image";
-import { HOME_HERO_IMAGE } from "@/lib/home-content";
+import { HOME_HERO, HOME_HERO_IMAGE } from "@/lib/home-content";
 
 export function HomeHero() {
   return (
@@ -20,16 +20,15 @@ export function HomeHero() {
             <span className="material-symbols-outlined text-[14px]" aria-hidden>
               bolt
             </span>
-            Active Discovery Phase
+            {HOME_HERO.badge}
           </div>
           <h1 className="font-headline-lg text-headline-lg mb-md text-text-primary leading-[1.05] editorial-spacing">
             A living product studio documenting the transformation of{" "}
-            <span className="text-primary font-medium italic">ideas</span> into{" "}
-            <span className="font-black">reality.</span>
+            <span className="text-primary font-medium italic">{HOME_HERO.titleEmphasis}</span> into{" "}
+            <span className="font-black">{HOME_HERO.titleEnd}</span>
           </h1>
           <p className="font-body-lg text-body-lg text-text-secondary mb-xl max-w-[640px] leading-relaxed">
-            Where human intuition meets machine execution. We operate as an open-ledger for methodology,
-            experiments, and the final artifacts of innovation.
+            {HOME_HERO.description}
           </p>
           <div className="flex flex-wrap gap-md">
             <Link

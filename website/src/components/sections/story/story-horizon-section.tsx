@@ -1,14 +1,13 @@
-import { STORY_HORIZON_KEYWORDS } from "@/lib/story-content";
+import { STORY_HORIZON, STORY_HORIZON_KEYWORDS } from "@/lib/story-content";
 
 export function StoryHorizonSection() {
   return (
     <section className="py-4xl bg-daybreak-white" data-scroll-fade>
       <div className="mx-auto w-full max-w-reading-width px-lg text-center space-y-2xl">
         <div className="space-y-lg">
-          <h2 className="font-headline-md text-headline-md text-text-primary">The Horizon</h2>
+          <h2 className="font-headline-md text-headline-md text-text-primary">{STORY_HORIZON.title}</h2>
           <p className="font-body-lg text-body-lg text-text-secondary leading-relaxed max-w-copy-2xl mx-auto">
-            We envision a future where human-AI collaboration becomes seamless. Not a world of automated
-            genericism, but one where technology serves as a precision tool for the human spirit.
+            {STORY_HORIZON.description}
           </p>
         </div>
         <div className="pt-xl border-t border-daybreak-grey/50">

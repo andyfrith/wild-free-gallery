@@ -1,0 +1,46 @@
+{
+  "description": "Canonical list of published artifacts and operational fields used by npm run content:check. Update when docs or website status change.",
+  "publishedArtifacts": [
+    "agents/project-context.md",
+    "agents/current-state.md",
+    "agents/decisions.md",
+    "docs/charter/program-charter.md",
+    "docs/prd/wild-free-gallery-v1-prd.md",
+    "docs/architecture/website-information-architecture.md",
+    "docs/roadmap/v1-launch-roadmap.md",
+    "docs/audits/strategic/001-foundation-governance-review.md",
+    "docs/dashboard/project-dashboard-v1.md",
+    "docs/design/v1-user-experience-blueprint.md",
+    "docs/design/v1-wireframe-specification.md",
+    "docs/architecture/mvp-technical-architecture.md",
+    "docs/design/design-system-foundation.md",
+    "DESIGN.md",
+    "docs/audits/A-002-experience-design-review.md",
+    "docs/design/mvp-visual-exploration-v1.md",
+    "AGENTS.md",
+    "assets/visual-exploration/cinematic-light/manifest.json",
+    "website/FOUNDATION.md",
+    "docs/audits/A-003-mvp-build-review.md",
+    "website/src/app"
+  ],
+  "audits": [
+    {
+      "id": "A-001",
+      "path": "docs/audits/strategic/001-foundation-governance-review.md"
+    },
+    {
+      "id": "A-002",
+      "path": "docs/audits/A-002-experience-design-review.md"
+    },
+    {
+      "id": "A-003",
+      "path": "docs/audits/A-003-mvp-build-review.md"
+    }
+  ],
+  "operationalSnapshot": {
+    "currentStatePath": "agents/current-state.md",
+    "expectedPhase": "Phase 1D — MVP Build",
+    "expectedHealth": "Green",
+    "siteTsPath": "website/src/lib/site.ts"
+  }
+}

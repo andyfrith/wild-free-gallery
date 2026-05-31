@@ -16,25 +16,29 @@ Active
 
 ## Current Phase
 
-Phase 1D — MVP Build
+Phase 1E — Public Launch
 
 ## Current Milestone
 
-MVP Implementation
+Production deployment
 
 ## Current Objective
 
-Build, verify, and deploy the MVP web application.
+Verify production deployment and complete launch checklist.
 
 ## Current Deliverables
 
-1. MVP Web Application (Next.js)
+1. MVP Web Application (Next.js) — **live**
 2. MVP Build Review (Audit #003)
-3. Deployment Configuration
-4. Analytics Integration
+3. Deployment Configuration — **complete**
+4. Analytics Integration — **deferred** (revisit later in project)
 
 ## Recently Completed
 
+- **Vercel production deploy** — https://wild-free-gallery.vercel.app (GitHub connected, Root Directory = `website`)
+- **Visual baseline sign-off** — all five routes approved
+- **Content stewardship** — `npm run content:check`, `content-manifest.json`, `.cursor/skills/sync-website-content/` skill
+- **Production content pass** — evidence-backed copy in `website/src/lib/*-content.ts`
 - Unified global `Navigation` and `Footer` (single layout on all routes; DEC-020)
 - Shared `Button` / `buttonVariants` with consistent `rounded-lg` CTAs; Tailwind merge fix for `text-on-primary`
 - Tailwind v4 width fix: `--max-width-*` in `@theme`, `max-w-copy-*`; layout tokens `max-w-content-width`, `max-w-reading-width`
@@ -64,26 +68,25 @@ Build, verify, and deploy the MVP web application.
 
 ## Active Risks
 
-1. **Website copy is still placeholder** — metrics, timelines, and artifact rows are illustrative until production content pass (see Audit A-003).
-2. Documentation may outpace implementation.
-3. Scope creep from future ecosystem ideas.
-4. Artifact overload may reduce visitor comprehension.
+1. **No CI or branch protection yet** — see `docs/operations/post-mvp-engineering-hardening.md`.
+2. Scope creep from future ecosystem ideas.
+3. Artifact overload may reduce visitor comprehension.
 
 ## Open Questions
 
-- Analytics provider selection
 - Artifact publishing workflow
 - Audit cadence
-- Content ownership model
-- Deployment configuration details
+- Contact channel for inquiries
+- Custom domain for production URL
+
+## Deferred (revisit later)
+
+- Analytics provider selection and integration (Plausible vs Vercel Analytics)
 
 ## Next Actions
 
-1. **Baseline sign-off** — eyes-on pass on all five routes (`website/docs/VISUAL-REVIEW.md`); `npm run screenshots` when ready
-2. **Production content** — replace placeholder copy with evidence-backed project facts (required before public launch per A-003)
-3. Deploy to Vercel and verify production build
-4. Analytics provider selection + integration
-5. After baseline agreed — Playwright e2e + a11y checks in CI
+1. **Verify production** — smoke-test all five routes on https://wild-free-gallery.vercel.app
+2. Post-launch — CI baseline and branch protection per hardening doc
 
 ## Conversation Startup Rule
 

@@ -9,10 +9,10 @@ export function HomeArtifactsGrid() {
         <div className="flex justify-between items-end mb-2xl">
           <div>
             <h2 className="font-headline-md text-headline-md text-text-primary editorial-spacing">
-              Recent Artifacts
+              Featured Artifacts
             </h2>
             <p className="font-body-md text-body-md text-text-secondary mt-1">
-              The tangible outputs of our current phase.
+              Core documents from the foundation and experience phases.
             </p>
           </div>
           <Link
@@ -24,8 +24,11 @@ export function HomeArtifactsGrid() {
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-lg">
           {HOME_ARTIFACT_CARDS.map((card) => (
-            <article
+            <a
               key={card.title}
+              href={card.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-white p-lg rounded-2xl border border-outline-variant/40 hover:shadow-2xl hover:border-primary/20 transition-all group cursor-pointer overflow-hidden"
             >
               <div className="aspect-[4/3] bg-bg-secondary rounded-xl mb-md overflow-hidden relative">
@@ -51,7 +54,7 @@ export function HomeArtifactsGrid() {
                 </span>
                 <span className="text-[12px] font-medium uppercase tracking-wider">{card.date}</span>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>

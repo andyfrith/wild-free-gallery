@@ -38,6 +38,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run dev` | Development server |
 | `npm run build` | Production build |
 | `npm run lint` | ESLint |
+| `npm run content:check` | Validate content links and manifest drift |
 | `npm run start` | Production server |
 | `npm run screenshots` | Capture app screenshots (requires dev server; uses Playwright) |
 
@@ -54,4 +55,13 @@ Per DEC-016: static-first, no database, no auth, no CMS for MVP.
 
 ## Deploy
 
-Target: Vercel. See [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying).
+**Target:** Vercel (Root Directory = `website`).
+
+```bash
+npm run build
+npm run content:check   # recommended before deploy
+```
+
+See [docs/operations/vercel-deployment.md](../docs/operations/vercel-deployment.md) for dashboard setup, CLI deploy, and checklist.
+
+Post-MVP CI, branch protection, and security hardening: [docs/operations/post-mvp-engineering-hardening.md](../docs/operations/post-mvp-engineering-hardening.md).

@@ -51,6 +51,20 @@ Rules:
 - Stitch MCP exports update `assets/visual-exploration/` only; merge selectively into the app.
 - Do not blind-run `stitch-to-tsx.py`.
 
+## Website Content
+
+When updating governance docs, audits, dashboard, or `agents/current-state.md`:
+
+- Sync structured website facts in `website/src/lib/*-content.ts` (see `.cursor/skills/sync-website-content/SKILL.md`).
+- Run `cd website && npm run content:check` before completing the task.
+- Do not auto-generate Story/About narrative from markdown unless explicitly requested.
+
+## Deployment
+
+- Production: https://wild-free-gallery.vercel.app
+- Setup and checklist: `docs/operations/vercel-deployment.md`
+- Post-MVP CI/security: `docs/operations/post-mvp-engineering-hardening.md`
+
 ## Development Rules
 
 - Do not introduce features outside approved MVP scope.

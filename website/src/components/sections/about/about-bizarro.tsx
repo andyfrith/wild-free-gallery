@@ -1,5 +1,5 @@
 import { StudioImage } from "@/components/ui/studio-image";
-import { ABOUT_BIZARRO_IMAGE } from "@/lib/about-content";
+import { ABOUT_BIZARRO, ABOUT_BIZARRO_IMAGE } from "@/lib/about-content";
 
 export function AboutBizarro() {
   return (
@@ -10,7 +10,7 @@ export function AboutBizarro() {
             <div className="aspect-square bg-bg-subtle rounded-3xl p-xl flex items-center justify-center">
               <StudioImage
                 src={ABOUT_BIZARRO_IMAGE}
-                alt="Meet Bizarro"
+                alt="Meet Bizarro — studio muse"
                 className="w-full h-full object-cover rounded-2xl grayscale hover:grayscale-0 transition-all duration-700"
               />
             </div>
@@ -20,22 +20,16 @@ export function AboutBizarro() {
           </div>
           <div className="order-1 lg:order-2 space-y-lg reveal-on-scroll">
             <h2 className="font-headline-md text-headline-md-mobile md:text-headline-md text-primary tracking-tight">
-              Meet Bizarro
+              {ABOUT_BIZARRO.title}
             </h2>
-            <p className="font-body-lg text-body-lg text-on-surface leading-relaxed">
-              Every great project needs a muse. Bizarro is the silent observer of late-night refactors and
-              early-morning brainstorms. While I focus on the architecture, Bizarro ensures the studio maintains its
-              soul.
-            </p>
+            <p className="font-body-lg text-body-lg text-on-surface leading-relaxed">{ABOUT_BIZARRO.description}</p>
             <div className="grid grid-cols-2 gap-md">
-              <div className="p-md rounded-lg bg-surface-container-low">
-                <span className="font-headline-sm text-headline-sm text-primary block">14+</span>
-                <span className="font-label-sm text-label-sm text-text-muted uppercase">Naps per day</span>
-              </div>
-              <div className="p-md rounded-lg bg-surface-container-low">
-                <span className="font-headline-sm text-headline-sm text-primary block">99%</span>
-                <span className="font-label-sm text-label-sm text-text-muted uppercase">Approval Rate</span>
-              </div>
+              {ABOUT_BIZARRO.stats.map((stat) => (
+                <div key={stat.label} className="p-md rounded-lg bg-surface-container-low">
+                  <span className="font-headline-sm text-headline-sm text-primary block">{stat.value}</span>
+                  <span className="font-label-sm text-label-sm text-text-muted uppercase">{stat.label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

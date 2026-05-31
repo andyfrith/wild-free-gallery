@@ -53,7 +53,8 @@ src/
   hooks/
     use-scroll-reveal.ts    # Shared scroll/motion IntersectionObserver hook
   lib/
-    site.ts                 # NAV_ITEMS, GITHUB_URL, shared constants
+    site.ts                 # NAV_ITEMS, GITHUB_URL, PROJECT_STATUS, repoFileUrl()
+    *-content.ts            # Curated page copy and structured facts (see Content stewardship)
 ```
 
 ### Canonical design references
@@ -120,6 +121,30 @@ Update FOUNDATION.md / component docs if architecture changes
 
 See [scripts/README.md](./scripts/README.md) for Stitch MCP export steps.
 
+## Content stewardship
+
+Website copy is **curated**, not auto-generated from markdown. Structured facts link to repository evidence; narrative prose is edited intentionally.
+
+### Layers
+
+| Layer | Location |
+| ----- | -------- |
+| Evidence | `docs/`, `agents/`, `DESIGN.md` |
+| Operational snapshot | `agents/current-state.md`, project dashboard |
+| Website presentation | `website/src/lib/*-content.ts`, `site.ts` |
+
+### When documentation changes
+
+1. Update the relevant `*-content.ts` module (see mapping in `.cursor/skills/sync-website-content/SKILL.md`).
+2. If artifact count or audits changed, update `website/scripts/content-manifest.json`.
+3. Run `npm run content:check` and `npm run build`.
+
+The content check validates file links, artifact counts, audit IDs, and operational snapshot alignment. It reports drift; it does not rewrite copy.
+
+### Deferred
+
+Full MDX ingestion and auto-generated narrative remain out of scope for MVP (DEC-016, Audit A-003). Revisit post-launch if artifact publishing workflow requires in-site reading.
+
 ## Component design guidelines
 
 - **Sections** — One component per major page block (`EditorialHero`, `PhilosophyCardGrid`, etc.). Props carry content; layout and styling stay internal.
@@ -136,8 +161,9 @@ See [scripts/README.md](./scripts/README.md) for Stitch MCP export steps.
 | Done | Extract `components/sections/` — all five routes | Complete |
 | Done | Motion layer (CSS + `useScrollReveal`) | Story, About, Journey |
 | Done | Lint hardening | 1 warning (Material Symbols link in layout) |
+| Done | Production content in `src/lib/*-content.ts` | Complete |
 | **Now** | **Visual review (eyes-on)** | See [docs/VISUAL-REVIEW.md](./docs/VISUAL-REVIEW.md) |
-| Soon | Production copy + Vercel deploy | Launch blockers |
+| Soon | Vercel deploy + analytics | Deploy live — analytics pending |
 | Later | Playwright visual regression + e2e | Post-baseline sign-off |
 
 ## Visual review
@@ -150,7 +176,8 @@ After architecture changes, run a manual pass before formal testing:
 
 ## Related documents
 
-- [scripts/README.md](./scripts/README.md) — Design export workflow
+- [scripts/README.md](./scripts/README.md) — Design export and content validation
+- [.cursor/skills/sync-website-content/SKILL.md](../.cursor/skills/sync-website-content/SKILL.md) — Agent workflow for content sync
 - [docs/VISUAL-REVIEW.md](./docs/VISUAL-REVIEW.md) — eyes-on review checklist
 - [../docs/design/design-system-foundation.md](../docs/design/design-system-foundation.md)
 - [../DESIGN.md](../DESIGN.md)

@@ -1,5 +1,5 @@
 import { StudioImage } from "@/components/ui/studio-image";
-import { STORY_FOREST_IMAGE } from "@/lib/story-content";
+import { STORY_BENTO, STORY_FOREST_IMAGE } from "@/lib/story-content";
 
 export function StoryCreativePhilosophyBento() {
   return (
@@ -18,12 +18,9 @@ export function StoryCreativePhilosophyBento() {
             />
             <div className="relative z-10 space-y-md">
               <h3 className="font-headline-md text-headline-md-mobile md:text-headline-md leading-tight">
-                Blending Discipline with Exploration
+                {STORY_BENTO.primary.title}
               </h3>
-              <p className="font-body-lg text-body-lg max-w-copy-lg opacity-90">
-                Creativity thrives within constraints. We balance the rigid structure of systematic design
-                with the fluid, unpredictable nature of artistic discovery.
-              </p>
+              <p className="font-body-lg text-body-lg max-w-copy-lg opacity-90">{STORY_BENTO.primary.body}</p>
             </div>
           </article>
           <article
@@ -35,12 +32,9 @@ export function StoryCreativePhilosophyBento() {
             </span>
             <div className="space-y-sm">
               <h4 className="font-headline-sm text-headline-sm-mobile md:text-headline-sm text-primary">
-                The Compass
+                {STORY_BENTO.compass.title}
               </h4>
-              <p className="font-body-md text-body-md opacity-80 leading-relaxed">
-                In every project, we ask: does this lead toward clarity or noise? The compass always points
-                toward the former.
-              </p>
+              <p className="font-body-md text-body-md opacity-80 leading-relaxed">{STORY_BENTO.compass.body}</p>
             </div>
           </article>
         </div>
